@@ -1,0 +1,257 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfólio de Razor, Desenvolvedor Web." />
+    <title>Portfólio | Razor</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <header>
+      <a href="#home" class="logo"><span>R</span>azor</a>
+      <nav>
+        <ul class="navlist">
+          <li><a href="#home" class="active">Início</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="right-header">
+        <a href="#contato" class="btn"
+          >Fale Comigo <i class="bx bx-send"></i
+        ></a>
+        <div class="menu-icon" aria-label="Abrir Menu" aria-expanded="false">
+          <div class="bar"></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="home" id="home">
+        <div class="container">
+          <div class="hero-info">
+            <h3>Seja Bem-Vindo</h3>
+            <h1>Olá, eu sou Razor</h1>
+            <div class="text-animated">
+              <h2 class="typewriter-text"></h2>
+            </div>
+            <p>
+              Desenvolvedor apaixonado por criar soluções digitais inovadoras e
+              eficientes. Com foco em transformar ideias em interfaces
+              intuitivas, busco as melhores práticas para entregar produtos de
+              alta qualidade e impacto visual, construindo experiências que
+              cativem os usuários.
+            </p>
+            <div class="btn-box">
+              <a href="#contato" class="btn"
+                >Contrate-me! <i class="bx bx-right-arrow-alt"></i
+              ></a>
+              <a href="#" class="btn d-CV"
+                >Download CV <i class="bx bx-download"></i
+              ></a>
+            </div>
+            <div class="social-media">
+              <a
+                href="#"
+                target="_blank"
+                aria-label="Visitar meu Instagram"
+                class="bg-icon"
+              >
+                <i class="bx bxl-instagram" aria-hidden="true"></i>
+                <span></span>
+              </a>
+              <a
+                href="https://github.com/TheRazorbill"
+                target="_blank"
+                aria-label="Visitar meu GitHub"
+                class="bg-icon"
+              >
+                <i class="bx bxl-github" aria-hidden="true"></i>
+                <span></span>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                aria-label="Visitar meu Twitter"
+                class="bg-icon"
+              >
+                <i class="bx bxl-twitter" aria-hidden="true"></i>
+                <span></span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/rahian-s-s/"
+                target="_blank"
+                aria-label="Visitar meu LinkedIn"
+                class="bg-icon"
+              >
+                <i class="bx bxl-linkedin" aria-hidden="true"></i>
+                <span></span>
+              </a>
+            </div>
+          </div>
+          <div class="img-hero">
+            <img src="assets/img.png" alt="Logo de Razor, uma ave estilizada." />
+          </div>
+        </div>
+      </section>
+
+      <section id="habilidades" class="skills portfolio-section">
+        <div class="container">
+          <h2>Minhas Habilidades</h2>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <h3>HTML</h3>
+              <p>
+                Criação de estruturas semânticas, acessíveis e bem organizadas
+                para a web moderna.
+              </p>
+            </div>
+            <div class="skill-item">
+              <h3>CSS</h3>
+              <p>
+                Estilização responsiva e moderna, com foco em layouts flexíveis,
+                animações e pré-processadores.
+              </p>
+            </div>
+            <div class="skill-item">
+              <h3>JavaScript</h3>
+              <p>
+                Desenvolvimento de interações dinâmicas e funcionais, utilizando
+                as melhores práticas do ES6+.
+              </p>
+            </div>
+            <div class="skill-item">
+              <h3>React</h3>
+              <p>
+                Construção de interfaces reativas e componentizadas com os
+                principais frameworks do mercado.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" class="projects portfolio-section">
+        <div class="container">
+          <h2>Meus Projetos</h2>
+          <div class="projects-carousel-wrapper">
+            <button
+              id="prev-project"
+              class="carousel-button prev"
+              aria-label="Projeto Anterior"
+            >
+              <
+            </button>
+            <div class="projects-grid">
+              <figure class="project-item">
+                <img
+                  src="assets/Acessibilidade.png"
+                  alt="Preview do projeto sobre acessibilidade web."
+                />
+                <figcaption>
+                  <h3>Acessibilidade Web 2.0</h3>
+                  <p>
+                    Projeto focado em demonstrar e explorar os desafios comuns
+                    de acessibilidade na web.
+                  </p>
+                  <div class="project-links">
+                    <a
+                      href="https://therazorbill.github.io/Acessibilidade-Web-2.0/"
+                      target="_blank"
+                      class="btn"
+                      >Ver Projeto</a
+                    >
+                    <a
+                      href="https://github.com/TheRazorbill/Acessibilidade-Web-2.0"
+                      target="_blank"
+                      class="btn"
+                      >GitHub</a
+                    >
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="project-item">
+                <img
+                  src="assets/Pagina de login.png"
+                  alt="Preview de uma página de login com fundo azul."
+                />
+                <figcaption>
+                  <h3>Página de Login</h3>
+                  <p>
+                    Interface de login completa com campos para email, senha e
+                    opções de registro.
+                  </p>
+                  <div class="project-links">
+                    <a
+                      href="https://therazorbill.github.io/Pagina-de-login/"
+                      target="_blank"
+                      class="btn"
+                      >Ver Projeto</a
+                    >
+                    <a
+                      href="https://github.com/TheRazorbill/Pagina-de-login"
+                      target="_blank"
+                      class="btn"
+                      >GitHub</a
+                    >
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <button
+              id="next-project"
+              class="carousel-button next"
+              aria-label="Próximo Projeto"
+            >
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="contact portfolio-section">
+        <div class="container">
+          <h2>Entre em Contato</h2>
+          <p>
+            Tem uma ideia ou um projeto em mente? Vamos conversar. Preencha o
+            formulário ou me encontre nas redes sociais.
+          </p>
+          <form action="#" method="POST">
+            <input type="text" name="nome" placeholder="Seu Nome" required />
+            <input type="email" name="email" placeholder="Seu Email" required />
+            <textarea
+              name="mensagem"
+              placeholder="Sua Mensagem"
+              rows="6"
+              required
+            ></textarea>
+            <button type="submit" class="btn">Enviar Mensagem</button>
+          </form>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/rahian-s-s/" target="_blank"
+              >LinkedIn</a
+            >
+            <a href="https://github.com/TheRazorbill" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Razor. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+```
