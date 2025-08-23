@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700&');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #101010;
+    --main-color: #00aaff;
+    --text-color: #ffffff;
+    --second-color: #cccccc;
+    --font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    z-index: 1000;
+    background-color: var(--bg-color);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: var(--second-color);
+    font-weight: 600;
+    margin-left: 30px;
+    transition: all .5s ease;
+}
+
+.navlist a:hover {
+    color: var(--main-color);
+}
+
+.navlist a.active {
+    color: var(--main-color);
+}
+
+section {
+    padding: 100px 8%;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.home .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.hero-info h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.hero-info h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.hero-info p {
+    font-size: 1em;
+    color: var(--second-color);
+    line-height: 1.5;
+}
+
+.btn-box {
+    display: flex;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--main-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+
+.btn.download {
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.btn:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn.download:hover {
+    background: var(--main-color);
+    color: var(--text-color);
+}
+
+.social-media a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.social-media a i {
+    font-size: 20px;
+    color: var(--main-color);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+}
+
+.social-media a:hover i {
+    color: var(--text-color);
+}
