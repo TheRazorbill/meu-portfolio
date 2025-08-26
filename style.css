@@ -162,3 +162,143 @@ section {
 .social-media a:hover i {
     color: var(--text-color);
 }
+
+#habilidades {
+    background: var(--second-bg-color);
+}
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.skill-item {
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    transition: all .5s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--main-color);
+}
+
+.skill-item h3 {
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    color: var(--second-color);
+    font-size: 0.9em;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+.project-item figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .5s ease;
+}
+
+.project-item:hover figcaption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-item figcaption h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-item figcaption p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+#contato {
+    background: var(--second-bg-color);
+}
+
+#contato form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1em;
+    margin-top: 3em;
+}
+
+#contato form input,
+#contato form textarea {
+  width: 100%;
+  padding: 15px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+#contato form textarea {
+  grid-column: 1 / -1;
+  resize: none;
+}
+
+form .btn {
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px 8%;
+    text-align: center;
+}
+
+footer p {
+    color: var(--second-color);
+    font-size: 0.9em;
+}
