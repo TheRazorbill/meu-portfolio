@@ -48,8 +48,9 @@ Você pode entrar em contato comigo através das minhas redes:
 
 Desenvolvido por: TheRazorbill
 
-LinkedIn: [(coloque o link para seu perfil no LinkedIn aqui)](https://www.linkedin.com/in/rahian-s-s/)
+LinkedIn: [(LinkedIn)](https://www.linkedin.com/in/rahian-s-s/)
 
 🖼️ Visualização
-[Prévia do Portfólio](<img width="1588" height="4115" alt="index" src="https://github.com/user-attachments/assets/787587ff-3853-4cd3-a0ba-9fe68db06ea3" />
+[Prévia do Portfólio](<img width="1588" height="4115" alt="index" src="https://github.com/user-attachments/assets/f867df6c-906f-437a-b663-4889b855f108" />
+
 ))
