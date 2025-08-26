@@ -302,3 +302,44 @@ footer p {
     color: var(--second-color);
     font-size: 0.9em;
 }
+
+@media (max-width: 850px) {
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: var(--second-bg-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        transition: all .5s ease;
+    }
+
+    .navlist.active {
+        right: 0;
+    }
+}
+
+.text-animated h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.typewriter-text::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
