@@ -12,11 +12,6 @@ Você pode visualizar o projeto em funcionamento no link abaixo:
 
 ---
 
-##  Visualização
-
-![Prévia do Portfólio](https://github.com/user-attachments/assets/f867df6c-906f-437a-b663-4889b855f108)
-
----
 
 ##  Funcionalidades
 
@@ -64,3 +59,11 @@ Você pode entrar em contato comigo através das minhas redes:
 
 - **Desenvolvido por:** TheRazorbill
 - **LinkedIn:** [Rahian S. S.](https://www.linkedin.com/in/rahian-s-s/)
+
+---
+
+##  Visualização
+
+![Prévia do Portfólio](https://github.com/user-attachments/assets/f867df6c-906f-437a-b663-4889b855f108)
+
+---
