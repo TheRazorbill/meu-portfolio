@@ -4,21 +4,21 @@ Este repositório abriga o código-fonte do meu portfólio pessoal. É uma vitri
 
 ---
 
-## 🚀 Demonstração Ao Vivo
+##  Demonstração Ao Vivo
 
 Você pode visualizar o projeto em funcionamento no link abaixo:
 
-➡️ **[Ver Portfólio](https://therazorbill.github.io/meu-portfolio/)**
+ **[Ver Portfólio](https://therazorbill.github.io/meu-portfolio/)**
 
 ---
 
-## 🖼️ Visualização
+##  Visualização
 
 ![Prévia do Portfólio](https://github.com/user-attachments/assets/f867df6c-906f-437a-b663-4889b855f108)
 
 ---
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 O portfólio está estruturado com as seguintes seções:
 
@@ -30,7 +30,7 @@ O portfólio está estruturado com as seguintes seções:
 
 ---
 
-## 💻 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 Este projeto foi construído utilizando as tecnologias padrões do desenvolvimento front-end:
 
@@ -40,7 +40,7 @@ Este projeto foi construído utilizando as tecnologias padrões do desenvolvimen
 
 ---
 
-## ⚙️ Como Executar Localmente
+##  Como Executar Localmente
 
 Caso queira executar o projeto na sua própria máquina, siga os passos abaixo:
 
@@ -58,7 +58,7 @@ Caso queira executar o projeto na sua própria máquina, siga os passos abaixo:
 
 ---
 
-## 📬 Contato
+##  Contato
 
 Você pode entrar em contato comigo através das minhas redes:
 
