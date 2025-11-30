@@ -1,193 +1,182 @@
-// Garante que o script só seja executado após o carregamento completo do DOM
 document.addEventListener("DOMContentLoaded", () => {
-  // Objeto que armazena referências a elementos do DOM para fácil acesso
   const dom = {
-    header: document.querySelector("header"), // Cabeçalho da página
-    navLinks: document.querySelectorAll(".navlist a"), // Todos os links de navegação
-    allSections: document.querySelectorAll("section.portfolio-section"), // Todas as seções do portfólio
-    menuIcon: document.querySelector(".menu-icon"), // Ícone do menu (hambúrguer)
-    navlist: document.querySelector(".navlist"), // Lista de navegação (menu mobile)
-    overlay: document.querySelector(".overlay"), // Overlay que escurece a tela no menu mobile
-    typewriterText: document.querySelector(".typewriter-text"), // Elemento para o efeito de máquina de escrever
-    projectsGrid: document.querySelector(".projects-grid"), // Grid de projetos para o carrossel
-    prevButton: document.getElementById("prev-project"), // Botão "anterior" do carrossel de projetos
-    nextButton: document.getElementById("next-project"), // Botão "próximo" do carrossel de projetos
+    header: document.querySelector("header"),
+    navLinks: document.querySelectorAll(".navlist a"),
+    allSections: document.querySelectorAll("section.portfolio-section"),
+    menuIcon: document.querySelector(".menu-icon"),
+    navlist: document.querySelector(".navlist"),
+    overlay: document.querySelector(".overlay"),
+    typewriterText: document.querySelector(".typewriter-text"),
+    logo: document.querySelector(".logo"),
+    projectsGrid: document.querySelector(".projects-grid"),
+    prevButton: document.getElementById("prev-project"),
+    nextButton: document.getElementById("next-project"),
   };
 
-  // Função para alternar a visibilidade do menu mobile e do overlay
   function toggleMenu() {
-    dom.navlist.classList.toggle("open"); // Adiciona/remove a classe 'open' na lista de navegação
-    dom.menuIcon.classList.toggle("active"); // Adiciona/remove a classe 'active' no ícone do menu
-    dom.overlay.classList.toggle("open"); // Adiciona/remove a classe 'open' no overlay
+    dom.navlist.classList.toggle("open");
+    dom.menuIcon.classList.toggle("active");
+    dom.overlay.classList.toggle("open");
   }
 
-  // Adiciona listeners de evento para o ícone do menu e o overlay
   if (dom.menuIcon && dom.navlist && dom.overlay) {
-    dom.menuIcon.addEventListener("click", toggleMenu); // Ao clicar no ícone, chama toggleMenu
-    dom.overlay.addEventListener("click", toggleMenu); // Ao clicar no overlay, chama toggleMenu
+    dom.menuIcon.addEventListener("click", toggleMenu);
+    dom.overlay.addEventListener("click", toggleMenu);
   }
 
-  // Configurações para o efeito de máquina de escrever
-  const textsToType = ["DEVELOPER", "DESIGNER", "PROGRAMMER"]; // Textos a serem digitados
-  const typingSpeed = 150; // Velocidade de digitação (ms por caractere)
-  const erasingSpeed = 100; // Velocidade de apagamento (ms por caractere)
-  const delayBeforeErase = 1500; // Atraso antes de apagar o texto (ms)
-  const delayBeforeTypingNext = 500; // Atraso antes de digitar o próximo texto (ms)
+  const textsToType = ["DEVELOPER", "DESIGNER", "PROGRAMMER"];
+  const typingSpeed = 150;
+  const erasingSpeed = 100;
+  const delayBeforeErase = 1500;
+  const delayBeforeTypingNext = 500;
 
-  let textIndex = 0; // Índice do texto atual na array textsToType
-  let charIndex = 0; // Índice do caractere atual no texto
-  let isDeleting = false; // Flag para indicar se está apagando ou digitando
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
 
-  // Função principal do efeito de máquina de escrever
   function typeEffect() {
-    if (!dom.typewriterText) return; // Sai se o elemento não existir
+    if (!dom.typewriterText) return;
 
-    const currentText = textsToType[textIndex]; // Texto atual a ser processado
-    const textElement = dom.typewriterText; // Elemento onde o texto será exibido
+    const currentText = textsToType[textIndex];
+    const textElement = dom.typewriterText;
 
     if (isDeleting) {
-      // Se estiver apagando
-      textElement.innerHTML = currentText.substring(0, charIndex - 1); // Remove um caractere
-      charIndex--; // Decrementa o índice do caractere
+      textElement.innerHTML = currentText.substring(0, charIndex - 1);
+      charIndex--;
       if (charIndex > 0) {
-        setTimeout(typeEffect, erasingSpeed); // Continua apagando
+        setTimeout(typeEffect, erasingSpeed);
       } else {
-        isDeleting = false; // Terminou de apagar
-        textIndex = (textIndex + 1) % textsToType.length; // Vai para o próximo texto (loop)
-        setTimeout(typeEffect, delayBeforeTypingNext); // Atraso antes de digitar o próximo
+        isDeleting = false;
+        textIndex = (textIndex + 1) % textsToType.length;
+        setTimeout(typeEffect, delayBeforeTypingNext);
       }
     } else {
-      // Se estiver digitando
-      textElement.innerHTML = currentText.substring(0, charIndex + 1); // Adiciona um caractere
-      charIndex++; // Incrementa o índice do caractere
+      textElement.innerHTML = currentText.substring(0, charIndex + 1);
+      charIndex++;
       if (charIndex < currentText.length) {
-        setTimeout(typeEffect, typingSpeed); // Continua digitando
+        setTimeout(typeEffect, typingSpeed);
       } else {
-        isDeleting = true; // Terminou de digitar
-        setTimeout(typeEffect, delayBeforeErase); // Atraso antes de apagar
+        isDeleting = true;
+        setTimeout(typeEffect, delayBeforeErase);
       }
     }
   }
 
-  // Inicia o efeito de máquina de escrever se o elemento existir
   if (dom.typewriterText) {
     setTimeout(typeEffect, delayBeforeTypingNext);
   }
 
-  // Adiciona/remove a classe 'scrolled' no cabeçalho ao rolar a página
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
-      dom.header.classList.add("scrolled"); // Adiciona a classe se a rolagem for maior que 50px
+      dom.header.classList.add("scrolled");
     } else {
-      dom.header.classList.remove("scrolled"); // Remove a classe se a rolagem for menor ou igual a 50px
+      dom.header.classList.remove("scrolled");
     }
   });
 
-  // Adiciona funcionalidade de rolagem suave e fechamento do menu mobile ao clicar nos links de navegação
   dom.navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
-      e.preventDefault(); // Previne o comportamento padrão do link (navegação instantânea)
-      const targetId = this.getAttribute("href"); // Obtém o ID da seção de destino
-      const targetSection = document.querySelector(targetId); // Seleciona a seção de destino
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
 
       if (targetSection) {
-        targetSection.scrollIntoView({ behavior: "smooth" }); // Rola suavemente até a seção
+        targetSection.scrollIntoView({ behavior: "smooth" });
       }
 
-      // Se o menu mobile estiver aberto, fecha-o
       if (dom.navlist.classList.contains("open")) {
         toggleMenu();
       }
     });
   });
 
-  // Observer para adicionar a classe 'is-visible' quando uma seção entra na viewport
   const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible"); // Adiciona a classe se a seção estiver visível
+          entry.target.classList.add("is-visible");
         }
       });
     },
-    { root: null, threshold: 0.2 } // Observa a viewport inteira, com 20% de visibilidade para disparar
+    { root: null, threshold: 0.2 }
   );
 
-  // Observa todas as seções do portfólio
   dom.allSections.forEach((section) => {
     sectionObserver.observe(section);
   });
   
-  // Observer específico para a seção 'home' para adicionar 'is-visible' ao seu contêiner
   const homeSectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.querySelector('.container').classList.add("is-visible"); // Adiciona a classe ao contêiner da seção home
+          entry.target.querySelector('.container').classList.add("is-visible");
         }
       });
     },
-    { root: null, threshold: 0.2 } // Observa a viewport inteira, com 20% de visibilidade para disparar
+    { root: null, threshold: 0.2 }
   );
   
-  const homeSection = document.querySelector('.home'); // Seleciona a seção home
+  const homeSection = document.querySelector('.home');
   if (homeSection) {
-    homeSectionObserver.observe(homeSection); // Observa a seção home
+    homeSectionObserver.observe(homeSection);
   }
 
-
-  // Observer para atualizar o link de navegação ativo com base na seção visível
   const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const currentId = entry.target.getAttribute('id'); // Obtém o ID da seção visível
+            const currentId = entry.target.getAttribute('id');
             dom.navLinks.forEach(link => {
-                link.classList.remove('active'); // Remove a classe 'active' de todos os links
+                link.classList.remove('active');
                 if (link.getAttribute('href').includes(currentId)) {
-                    link.classList.add('active'); // Adiciona a classe 'active' ao link correspondente à seção visível
+                    link.classList.add('active');
                 }
             });
         }
     });
   }, {
-      root: null, // Observa a viewport inteira
-      rootMargin: '-40% 0px -60% 0px', // Margem para ajustar quando a seção é considerada "visível"
-      threshold: 0 // Dispara assim que a seção entra na viewport
+      root: null,
+      rootMargin: '-40% 0px -60% 0px',
+      threshold: 0
   });
 
-  // Observa todas as seções que possuem um ID
   document.querySelectorAll('section[id]').forEach(section => {
       navObserver.observe(section);
   });
 
-  // Lógica para o carrossel de projetos
+  if (dom.logo) {
+    dom.logo.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+
   if (dom.projectsGrid) {
-    // Função para atualizar o estado dos botões de navegação do carrossel (habilitado/desabilitado)
     const updateCarouselButtons = () => {
-      const scrollLeft = dom.projectsGrid.scrollLeft; // Posição atual da rolagem horizontal
-      const scrollWidth = dom.projectsGrid.scrollWidth; // Largura total do conteúdo rolável
-      const clientWidth = dom.projectsGrid.clientWidth; // Largura visível do contêiner
+      const scrollLeft = dom.projectsGrid.scrollLeft;
+      const scrollWidth = dom.projectsGrid.scrollWidth;
+      const clientWidth = dom.projectsGrid.clientWidth;
 
-      dom.prevButton.disabled = scrollLeft <= 0; // Desabilita o botão "anterior" se estiver no início
-      dom.nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 1; // Desabilita o botão "próximo" se estiver no final
+      dom.prevButton.disabled = scrollLeft <= 0;
+      dom.nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 1;
     };
 
-    // Função para rolar o carrossel em uma direção específica
     const scrollCarousel = (direction) => {
-      const firstProject = dom.projectsGrid.querySelector(".project-item"); // Pega o primeiro item do projeto
-      if (!firstProject) return; // Sai se não houver itens
+      const firstProject = dom.projectsGrid.querySelector(".project-item");
+      if (!firstProject) return;
 
-      const projectWidth = firstProject.offsetWidth; // Largura de um item de projeto
-      const gap = parseInt(window.getComputedStyle(dom.projectsGrid).gap) || 30; // Espaçamento entre os itens
+      const projectWidth = firstProject.offsetWidth;
+      const gap = parseInt(window.getComputedStyle(dom.projectsGrid).gap) || 30;
       
-      dom.projectsGrid.scrollLeft += (projectWidth + gap) * direction; // Rola o carrossel
+      dom.projectsGrid.scrollLeft += (projectWidth + gap) * direction;
     };
 
-    // Adiciona listeners de evento para os botões de navegação do carrossel
-    dom.nextButton.addEventListener("click", () => scrollCarousel(1)); // Rola para a direita
-    dom.prevButton.addEventListener("click", () => scrollCarousel(-1)); // Rola para a esquerda
-    dom.projectsGrid.addEventListener("scroll", updateCarouselButtons); // Atualiza os botões ao rolar manualmente
+    dom.nextButton.addEventListener("click", () => scrollCarousel(1));
+    dom.prevButton.addEventListener("click", () => scrollCarousel(-1));
+    dom.projectsGrid.addEventListener("scroll", updateCarouselButtons);
 
-    updateCarouselButtons(); // Chama a função uma vez para definir o estado inicial dos botões
+    updateCarouselButtons();
   }
 });
