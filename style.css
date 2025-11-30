@@ -1,418 +1,425 @@
-/* Importa a fonte 'Inter' do Google Fonts com diferentes pesos */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* Definição de variáveis CSS para cores e outros valores reutilizáveis */
 :root {
-    --bg-color: #0F172A; /* Cor de fundo principal */
-    --second-bg-color: #1E293B; /* Cor de fundo secundária, usada para seções e cards */
-    --card-color: #1A2336; /* Cor de fundo para cards específicos */
-    --text-color: #E2E8F0; /* Cor principal do texto */
-    --main-color: #00A3FF; /* Cor de destaque (azul) */
-    --other-color: #94A3B8; /* Cor para texto secundário ou ícones */
-    --border-color: #334155; /* Cor para bordas */
+    --bg-color: #0F172A;
+    --second-bg-color: #1E293B;
+    --card-color: #1A2336;
+    --text-color: #E2E8F0;
+    --main-color: #00A3FF;
+    --other-color: #94A3B8;
+    --border-color: #334155;
 }
 
-/* Reset básico para todos os elementos */
 * {
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove preenchimentos padrão */
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura total */
-    font-family: 'Inter', sans-serif; /* Define a fonte padrão para todo o site */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Comportamento de rolagem suave para âncoras */
 html {
     scroll-behavior: smooth;
 }
 
-/* Estilos para o corpo da página */
 body {
-    background: var(--bg-color); /* Aplica a cor de fundo principal */
-    color: var(--text-color); /* Aplica a cor de texto principal */
-    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
 }
 
-/* Estilos para o contêiner principal de conteúdo */
 .container {
-    width: 90%; /* Largura do contêiner */
-    max-width: 1200px; /* Largura máxima do contêiner */
-    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-    padding: 0 20px; /* Preenchimento horizontal */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Estilos para botões genéricos */
 .btn {
-    display: inline-block; /* Permite definir largura e altura, mas se comporta como texto */
-    padding: 12px 32px; /* Preenchimento interno */
-    background: var(--main-color); /* Cor de fundo principal */
-    color: #fff; /* Cor do texto branca */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: 600; /* Peso da fonte */
-    border-radius: 8px; /* Borda arredondada */
-    text-decoration: none; /* Remove sublinhado do link */
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para hover */
-    border: 2px solid transparent; /* Borda transparente */
+    display: inline-block;
+    padding: 12px 32px;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
 }
 
-/* Estilos para ícones dentro de botões */
 .btn i {
-    margin-left: 8px; /* Margem à esquerda do ícone */
-    vertical-align: middle; /* Alinha o ícone verticalmente ao meio */
+    margin-left: 8px;
+    vertical-align: middle;
 }
 
-/* Efeito de hover para botões */
 .btn:hover {
-    transform: translateY(-3px); /* Move o botão ligeiramente para cima */
-    box-shadow: 0 10px 20px rgba(0, 163, 255, 0.2); /* Adiciona sombra */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 163, 255, 0.2);
 }
 
-/* Estilos específicos para o botão de download de CV */
 .btn.d-CV {
-    background: transparent; /* Fundo transparente */
-    border: 2px solid var(--main-color); /* Borda com a cor principal */
-    color: var(--main-color); /* Cor do texto principal */
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
 }
-/* Efeito de hover para o botão de download de CV */
 .btn.d-CV:hover {
-    background: var(--main-color); /* Fundo com a cor principal */
-    color: #fff; /* Cor do texto branca */
+    background: var(--main-color);
+    color: #fff;
 }
 
-/* Estilos para o cabeçalho */
 header {
-    position: fixed; /* Fixa o cabeçalho no topo da tela */
-    top: 0; /* Alinha ao topo */
-    right: 0; /* Alinha à direita */
-    width: 100%; /* Ocupa 100% da largura */
-    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
-    display: flex; /* Usa flexbox para alinhamento */
-    align-items: center; /* Alinha itens verticalmente ao centro */
-    justify-content: space-between; /* Distribui espaço entre os itens */
-    padding: 22px 5%; /* Preenchimento interno */
-    background: transparent; /* Fundo transparente */
-    transition: background-color .3s ease, border-bottom .3s ease; /* Transições suaves */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 5%;
+    background: transparent;
+    transition: background-color .3s ease, border-bottom .3s ease;
 }
 
-/* Estilos para o cabeçalho quando a página é rolada */
 header.scrolled {
-    background: rgba(15, 23, 42, 0.85); /* Fundo semi-transparente */
-    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
-    border-bottom: 1px solid var(--border-color); /* Borda inferior */
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
 }
 
-/* Estilos para o logo */
 .logo {
-    font-weight: 800; /* Peso da fonte */
-    font-size: 28px; /* Tamanho da fonte */
-    letter-spacing: 1px; /* Espaçamento entre letras */
-    color: var(--text-color); /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    text-decoration: none;
 }
 
-/* Estilos para a primeira letra do logo */
 .logo span {
-    color: var(--main-color); /* Cor de destaque */
+    color: var(--main-color);
 }
 
-/* Estilos para a lista de navegação */
 .navlist {
-    display: flex; /* Usa flexbox para alinhar os itens */
-    list-style: none; /* Remove marcadores de lista */
+    display: flex;
+    list-style: none;
 }
 
-/* Estilos para os links da navegação */
 .navlist a {
-    color: var(--other-color); /* Cor do texto */
-    font-weight: 500; /* Peso da fonte */
-    padding: 10px 20px; /* Preenchimento interno */
-    font-size: 1rem; /* Tamanho da fonte */
-    transition: color .3s ease; /* Transição suave para a cor */
-    text-decoration: none; /* Remove sublinhado */
-    position: relative; /* Posição relativa para o pseudo-elemento */
+    color: var(--other-color);
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: color .3s ease;
+    text-decoration: none;
+    position: relative;
 }
 
-/* Efeito de hover e estilo para o link ativo na navegação */
 .navlist a:hover,
 .navlist a.active {
-    color: var(--main-color); /* Cor de destaque */
+    color: var(--main-color);
 }
 
-/* Pseudo-elemento para a linha abaixo do link ativo */
 .navlist a.active::after {
-    content: ''; /* Conteúdo vazio */
-    position: absolute; /* Posição absoluta */
-    bottom: -2px; /* Alinha abaixo do link */
-    left: 20px; /* Posição à esquerda */
-    width: calc(100% - 40px); /* Largura da linha */
-    height: 2px; /* Altura da linha */
-    background: var(--main-color); /* Cor da linha */
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 2px;
+    background: var(--main-color);
 }
 
-/* Estilos para a seção de início (home) */
 .home {
-    min-height: 100vh; /* Altura mínima de 100% da viewport */
-    width: 100%; /* Ocupa 100% da largura */
-    display: flex; /* Usa flexbox */
-    align-items: center; /* Alinha itens verticalmente ao centro */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-/* Estilos para o contêiner dentro da seção home */
 .home .container {
-    display: flex; /* Usa flexbox */
-    align-items: center; /* Alinha itens verticalmente ao centro */
-    justify-content: space-between; /* Distribui espaço entre os itens */
-    gap: 2rem; /* Espaçamento entre os itens */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-/* Estilos para a área de informações do herói */
-.hero-info { max-width: 650px; } /* Largura máxima */
-.hero-info h3 { font-size: 22px; font-weight: 500; margin-bottom: 15px; color: var(--other-color); } /* Título secundário */
-.hero-info h1 { font-size: clamp(40px, 8vw, 72px); font-weight: 800; margin-bottom: 20px; line-height: 1.1; } /* Título principal */
-.hero-info p { font-size: 18px; line-height: 1.7; color: var(--other-color); margin-bottom: 40px; } /* Parágrafo de descrição */
+.hero-info { max-width: 650px; }
+.hero-info h3 { font-size: 22px; font-weight: 500; margin-bottom: 15px; color: var(--other-color); }
+.hero-info h1 { font-size: clamp(40px, 8vw, 72px); font-weight: 800; margin-bottom: 20px; line-height: 1.1; }
+.hero-info p { font-size: 18px; line-height: 1.7; color: var(--other-color); margin-bottom: 40px; }
 
-/* Estilos para o texto animado (efeito máquina de escrever) */
 .text-animated h2 { font-size: clamp(30px, 5vw, 50px); font-weight: 700; color: var(--main-color); margin-bottom: 20px; min-height: 60px; }
 
-/* Estilos para a caixa de botões */
 .btn-box { display: flex; align-items: center; gap: 20px; }
 
-/* Estilos para a seção de mídias sociais */
 .social-media { margin-top: 3rem; display: flex; align-items: center; gap: 1rem; }
 .social-media .bg-icon {
-    background: var(--second-bg-color); /* Fundo do ícone */
-    display: flex; /* Usa flexbox para centralizar o ícone */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    width: 45px; /* Largura */
-    height: 45px; /* Altura */
-    border-radius: 50%; /* Borda arredondada (círculo) */
-    transition: all .3s ease; /* Transição suave */
-    text-decoration: none; /* Remove sublinhado */
+    background: var(--second-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: all .3s ease;
+    text-decoration: none;
 }
-.social-media .bg-icon i { font-size: 24px; color: var(--other-color); transition: color .3s ease; } /* Estilos para o ícone */
-.social-media .bg-icon:hover { background: var(--main-color); } /* Efeito de hover no fundo */
-.social-media .bg-icon:hover i { color: #fff; } /* Efeito de hover na cor do ícone */
+.social-media .bg-icon i { font-size: 24px; color: var(--other-color); transition: color .3s ease; }
+.social-media .bg-icon:hover { background: var(--main-color); }
+.social-media .bg-icon:hover i { color: #fff; }
 
-/* Estilos para a imagem do herói */
 .img-hero { position: relative; }
 .img-hero img {
-    width: clamp(280px, 35vw, 450px); /* Largura responsiva */
-    height: auto; /* Altura automática */
-    border-radius: 50%; /* Borda arredondada (círculo) */
-    border: 10px solid var(--second-bg-color); /* Borda */
-    box-shadow: 0 0 40px rgba(0, 163, 255, 0.2); /* Sombra */
+    width: clamp(280px, 35vw, 450px);
+    height: auto;
+    border-radius: 50%;
+    border: 10px solid var(--second-bg-color);
+    box-shadow: 0 0 40px rgba(0, 163, 255, 0.2);
 }
 
-/* Estilos gerais para as seções do portfólio */
 .portfolio-section {
-    padding: 120px 0; /* Preenchimento superior e inferior */
-    scroll-margin-top: 80px; /* Margem superior para rolagem suave */
+    padding: 120px 0;
+    scroll-margin-top: 80px;
 }
 
-/* Estilos para os títulos das seções do portfólio */
 .portfolio-section h2 {
-    font-size: clamp(32px, 5vw, 48px); /* Tamanho da fonte responsivo */
-    margin-bottom: 60px; /* Margem inferior */
-    font-weight: 700; /* Peso da fonte */
-    color: var(--text-color); /* Cor do texto */
-    text-align: center; /* Alinhamento centralizado */
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 60px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
 }
 
-/* Estilos para a seção de habilidades */
-.skills { background: var(--second-bg-color); } /* Cor de fundo secundária */
+.skills { background: var(--second-bg-color); }
 .skills-grid {
-    display: grid; /* Usa grid para o layout */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
-    gap: 30px; /* Espaçamento entre os itens do grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 .skill-item {
-    background: var(--card-color); /* Cor de fundo do item de habilidade */
-    padding: 40px 30px; /* Preenchimento interno */
-    border-radius: 8px; /* Borda arredondada */
-    border: 1px solid var(--border-color); /* Borda */
-    transition: transform 0.3s ease, border-color 0.3s ease; /* Transições suaves */
-    text-align: center; /* Alinhamento centralizado do texto */
+    background: var(--card-color);
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: center;
 }
-/* Efeito de hover para o item de habilidade */
 .skill-item:hover {
-    transform: translateY(-8px); /* Move o item ligeiramente para cima */
-    border-color: var(--main-color); /* Altera a cor da borda */
+    transform: translateY(-8px);
+    border-color: var(--main-color);
 }
-.skill-item h3 { margin-bottom: 15px; color: var(--main-color); font-size: 20px; } /* Título da habilidade */
-.skill-item p { color: var(--other-color); line-height: 1.6; } /* Descrição da habilidade */
+.skill-item h3 { margin-bottom: 15px; color: var(--main-color); font-size: 20px; }
+.skill-item p { color: var(--other-color); line-height: 1.6; }
 
-/* Estilos para a seção de projetos */
-.projects { background: var(--bg-color); } /* Cor de fundo principal */
-.projects-carousel-wrapper { position: relative; } /* Posição relativa para os botões do carrossel */
+.projects { background: var(--bg-color); }
+.projects-carousel-wrapper { position: relative; }
 .projects-grid {
-    display: flex; /* Usa flexbox para o carrossel */
-    gap: 30px; /* Espaçamento entre os projetos */
-    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
-    scroll-behavior: smooth; /* Rolagem suave */
-    padding: 20px; /* Preenchimento */
-    margin: 0 -20px; /* Margem negativa para alinhar com o contêiner */
+    display: flex;
+    gap: 30px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 20px;
+    margin: 0 -20px;
 }
 .project-item {
-    flex: 0 0 calc(50% - 15px); /* Define a largura dos itens do carrossel */
-    max-width: 500px; /* Largura máxima */
-    background: var(--card-color); /* Cor de fundo do item do projeto */
-    border-radius: 8px; /* Borda arredondada */
-    border: 1px solid var(--border-color); /* Borda */
-    text-align: left; /* Alinhamento do texto */
-    transition: transform 0.3s ease, border-color 0.3s ease; /* Transições suaves */
-    overflow: hidden; /* Esconde conteúdo que transborda */
-    display: flex; /* Usa flexbox */
-    flex-direction: column; /* Layout em coluna */
+    flex: 0 0 calc(50% - 15px);
+    max-width: 500px;
+    background: var(--card-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-/* Efeito de hover para o item do projeto */
 .project-item:hover {
-    transform: translateY(-8px); /* Move o item ligeiramente para cima */
-    border-color: var(--main-color); /* Altera a cor da borda */
+    transform: translateY(-8px);
+    border-color: var(--main-color);
 }
 .project-item img {
-    width: 100%; /* Ocupa 100% da largura */
-    height: 250px; /* Altura fixa */
-    object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
-    border-bottom: 1px solid var(--border-color); /* Borda inferior */
-    transition: transform 0.4s ease; /* Transição suave */
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+    transition: transform 0.4s ease;
 }
-/* Efeito de hover na imagem do projeto */
 .project-item:hover img {
-    transform: scale(1.05); /* Aumenta ligeiramente a imagem */
+    transform: scale(1.05);
 }
 .project-item figcaption {
-    padding: 25px; /* Preenchimento */
-    flex-grow: 1; /* Permite que o figcaption cresça */
-    display: flex; /* Usa flexbox */
-    flex-direction: column; /* Layout em coluna */
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
-.project-item h3 { margin-bottom: 10px; color: var(--text-color); font-size: 22px; } /* Título do projeto */
-.project-item p { font-size: 1em; margin-bottom: 20px; color: var(--other-color); line-height: 1.6; flex-grow: 1; } /* Descrição do projeto */
-.project-links { margin-top: auto; } /* Empurra os links para baixo */
-.project-links .btn { margin-right: 10px; padding: 10px 24px; font-size: 14px; } /* Estilos para os botões de link do projeto */
+.project-item h3 { margin-bottom: 10px; color: var(--text-color); font-size: 22px; }
+.project-item p { font-size: 1em; margin-bottom: 20px; color: var(--other-color); line-height: 1.6; flex-grow: 1; }
+.project-links { margin-top: auto; }
+.project-links .btn { margin-right: 10px; padding: 10px 24px; font-size: 14px; }
 
-/* Estilos para os botões do carrossel */
 .carousel-button {
-    position: absolute; /* Posição absoluta */
-    top: 50%; /* Alinha ao meio verticalmente */
-    transform: translateY(-50%); /* Ajusta a posição para centralizar */
-    background-color: var(--second-bg-color); /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: 1px solid var(--border-color); /* Borda */
-    border-radius: 50%; /* Borda arredondada (círculo) */
-    width: 45px; /* Largura */
-    height: 45px; /* Altura */
-    font-size: 24px; /* Tamanho da fonte */
-    cursor: pointer; /* Cursor de ponteiro */
-    z-index: 10; /* Z-index para ficar acima de outros elementos */
-    display: flex; /* Usa flexbox para centralizar o conteúdo */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--second-bg-color);
+    color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-/* Efeito de hover para os botões do carrossel (quando não desabilitados) */
 .carousel-button:hover:not(:disabled) {
-    background-color: var(--main-color); /* Altera a cor de fundo */
-    transform: translateY(-50%) scale(1.1); /* Aumenta ligeiramente e mantém centralizado */
+    background-color: var(--main-color);
+    transform: translateY(-50%) scale(1.1);
 }
-.carousel-button.prev { left: -25px; } /* Posição do botão anterior */
-.carousel-button.next { right: -25px; } /* Posição do botão próximo */
-.carousel-button:disabled { opacity: 0.3; cursor: not-allowed; } /* Estilos para botões desabilitados */
+.carousel-button.prev { left: -25px; }
+.carousel-button.next { right: -25px; }
+.carousel-button:disabled { opacity: 0.3; cursor: not-allowed; }
 
-/* Estilos para os links sociais na seção de contato */
 .social-links {
-    text-align: center; /* Alinhamento centralizado */
-    margin-top: 40px; /* Margem superior */
+    text-align: center;
+    margin-top: 40px;
 }
 
 .social-links a {
-    display: inline-block; /* Permite definir margens e se comporta como texto */
-    margin: 0 15px; /* Margem horizontal */
-    color: var(--other-color); /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
-    font-weight: 500; /* Peso da fonte */
-    font-size: 1rem; /* Tamanho da fonte */
-    transition: color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    display: inline-block;
+    margin: 0 15px;
+    color: var(--other-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Efeito de hover para os links sociais */
 .social-links a:hover {
-    color: var(--main-color); /* Altera a cor do texto */
-    transform: translateY(-2px); /* Move o link ligeiramente para cima */
+    color: var(--main-color);
+    transform: translateY(-2px);
 }
-/* Estilos para a seção de contato */
-.contact { background: var(--second-bg-color); } /* Cor de fundo secundária */
-.contact p { max-width: 600px; margin: 0 auto 40px; font-size: 1.1em; color: var(--other-color); text-align: center; } /* Parágrafo de descrição */
-.contact form { max-width: 700px; margin: 0 auto 30px; display: flex; flex-direction: column; gap: 20px; } /* Formulário de contato */
+.contact { background: var(--second-bg-color); }
+.contact p { max-width: 600px; margin: 0 auto 40px; font-size: 1.1em; color: var(--other-color); text-align: center; }
+.contact form { max-width: 700px; margin: 0 auto 30px; display: flex; flex-direction: column; gap: 20px; }
 .contact form input,
 .contact form textarea {
-    width: 100%; /* Ocupa 100% da largura */
-    padding: 15px; /* Preenchimento interno */
-    border: 1px solid var(--border-color); /* Borda */
-    border-radius: 8px; /* Borda arredondada */
-    font-size: 1em; /* Tamanho da fonte */
-    background: var(--bg-color); /* Cor de fundo */
-    color: var(--text-color); /* Cor do texto */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-/* Estilos para input e textarea quando em foco */
 .contact form input:focus,
 .contact form textarea:focus {
-    outline: none; /* Remove o contorno padrão */
-    border-color: var(--main-color); /* Altera a cor da borda */
-    box-shadow: 0 0 10px rgba(0, 163, 255, 0.3); /* Adiciona sombra */
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 10px rgba(0, 163, 255, 0.3);
 }
-.contact form button { width: auto; align-self: center; cursor: pointer; } /* Botão de envio do formulário */
+.contact form button { width: auto; align-self: center; cursor: pointer; }
 
-/* Estilos para o rodapé */
 footer {
-    background: var(--bg-color); /* Cor de fundo principal */
-    text-align: center; /* Alinhamento centralizado do texto */
-    padding: 30px 0; /* Preenchimento superior e inferior */
-    border-top: 1px solid var(--border-color); /* Borda superior */
-    margin-top: 30px; /* Margem superior */
-}
-footer p {
-    margin: 0; /* Remove margem padrão */
-    font-size: 0.9em; /* Tamanho da fonte */
-    color: var(--other-color); /* Cor do texto */
+    background: var(--second-bg-color);
+    padding: 60px 0 20px;
+    border-top: 1px solid var(--border-color);
 }
 
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
 
-/* Media Queries para Responsividade */
+.footer-info, .footer-links, .footer-social {
+    flex: 1;
+    min-width: 250px;
+}
 
-/* Para telas menores que 1020px */
+.footer-info h3, .footer-links h3, .footer-social h3 {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-info p {
+    color: var(--other-color);
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: var(--other-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--main-color);
+}
+
+.footer-social .social-media {
+    margin-top: 0;
+    justify-content: flex-start;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-bottom p {
+    font-size: 0.9em;
+    color: var(--other-color);
+}
+
+
 @media (max-width: 1020px) {
-    .home .container { flex-direction: column; text-align: center; justify-content: center; } /* Altera o layout da seção home para coluna */
-    .home { height: auto; padding: 150px 0 100px; } /* Ajusta a altura e preenchimento da seção home */
-    .img-hero { margin: 60px auto 0; } /* Centraliza a imagem do herói */
-    .btn-box, .social-media { justify-content: center; } /* Centraliza os botões e mídias sociais */
+    .home .container { flex-direction: column; text-align: center; justify-content: center; }
+    .home { height: auto; padding: 150px 0 100px; }
+    .img-hero { margin: 60px auto 0; }
+    .btn-box, .social-media { justify-content: center; }
 }
 
-/* Para telas menores que 900px */
 @media (max-width: 900px) {
   .project-item {
-    flex-basis: 100%; /* Faz com que os itens do projeto ocupem 100% da largura */
+    flex-basis: 100%;
   }
 }
 
-/* Para telas menores que 768px (dispositivos móveis) */
 @media (max-width: 768px) {
-    .menu-icon { display: flex; } /* Exibe o ícone do menu mobile */
+    .menu-icon { display: flex; }
     .navlist {
-        position: absolute; /* Posição absoluta para o menu mobile */
-        top: 0; /* Alinha ao topo */
-        right: -100%; /* Esconde o menu para a direita */
-        width: 280px; /* Largura do menu */
-        height: 100vh; /* Altura total da viewport */
-        background: var(--second-bg-color); /* Cor de fundo */
-        flex-direction: column; /* Layout em coluna */
-        align-items: flex-start; /* Alinha itens ao início */
-        padding: 80px 40px; /* Preenchimento */
-        transition: right .40s ease-in-out; /* Transição suave */
-        box-shadow: -5px 0 20px rgba(0,0,0,0.2); /* Sombra */
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--second-bg-color);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 40px;
+        transition: right .40s ease-in-out;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.2);
     }
-    .navlist.open { right: 0; } /* Exibe o menu quando a classe 'open' é adicionada */
-    .navlist a { display: block; margin: 15px 0; font-size: 1.2rem; } /* Estilos para links do menu mobile */
-    .navlist a.active::after { display: none; } /* Esconde a linha de destaque do link ativo no mobile */
+    .navlist.open { right: 0; }
+    .navlist a { display: block; margin: 15px 0; font-size: 1.2rem; }
+    .navlist a.active::after { display: none; }
 }
