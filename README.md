@@ -41,7 +41,7 @@ Caso queira executar o projeto na sua própria máquina, siga os passos abaixo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/TheRazorbill/meu-portfolio.git](https://github.com/TheRazorbill/meu-portfolio.git)
+    git clone https://github.com/TheRazorbill/meu-portfolio.git
     ```
 
 2.  **Navegue até o diretório do projeto:**
