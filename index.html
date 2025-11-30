@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Define o conjunto de caracteres para o documento -->
+    <meta charset="UTF-8" />
+    <!-- Configura a viewport para garantir que o site seja responsivo em diferentes dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Descrição do site para motores de busca -->
+    <meta name="description" content="Portfólio de Razor, Desenvolvedor Web." />
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Portfólio | Razor</title>
+    <!-- Link para a biblioteca de ícones Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Link para o arquivo de estilos CSS personalizado -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Overlay para o menu mobile, que escurece o fundo quando o menu está aberto -->
+    <div class="overlay"></div>
+    <!-- Cabeçalho da página, contendo o logo, navegação e botão de contato -->
+    <header>
+      <!-- Logo do portfólio, que também serve como link para a seção de início -->
+      <a href="#home" class="logo"><span>R</span>ahian</a>
+      <!-- Navegação principal do site -->
+      <nav>
+        <ul class="navlist">
+          <!-- Links para as diferentes seções da página -->
+          <li><a href="#home" class="active">Início</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <!-- Seção direita do cabeçalho, contendo o botão de contato e o ícone do menu mobile -->
+      <div class="right-header">
+        <!-- Botão para a seção de contato -->
+        <a href="#contato" class="btn"
+          >Fale Comigo <i class="bx bx-send"></i
+        ></a>
+        <!-- Ícone do menu para dispositivos móveis -->
+        <div class="menu-icon" aria-label="Abrir Menu" aria-expanded="false">
+          <div class="bar"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main id="main-content">
+      <!-- Seção de Início (Home) -->
+      <section class="home" id="home">
+        <div class="container">
+          <!-- Informações do herói (títulos, texto animado, descrição) -->
+          <div class="hero-info">
+            <h3>Seja Bem-Vindo</h3>
+            <h1>Olá, eu sou o Rahian</h1>
+
+            <!-- Contêiner para o texto animado (efeito máquina de escrever) -->
+            <div class="text-animated">
+            <h2 class="typewriter-text"></h2> </div>
+
+            <!-- Parágrafo de descrição sobre o desenvolvedor -->
+            <p>
+              Desenvolvedor apaixonado por criar soluções digitais inovadoras e
+              eficientes. Com foco em transformar ideias em interfaces
+              intuitivas, busco as melhores práticas para entregar produtos de
+              alta qualidade e impacto visual, construindo experiências que
+              cativem os usuários.
+            </p>
+
+            <!-- Caixa de botões para contato e download de CV -->
+            <div class="btn-box">
+              <a href="#contato" class="btn"
+                >Contrate-me! <i class="bx bx-right-arrow-alt"></i
+              ></a>
+              <a href="#" class="btn d-CV"
+                >Download CV <i class="bx bx-download"></i
+              ></a>
+            </div>
+
+            <!-- Links para as redes sociais -->
+            <div class="social-media">
+              <a
+                href="#"
+                target="_blank"
+                aria-label="Visitar meu Instagram"
+                class="bg-icon"
+              >
+                <i class="bx bxl-instagram" aria-hidden="true"></i>
+                <span></span>
+              </a>
+              <a
+                href="https://github.com/TheRazorbill"
+                target="_blank"
+                aria-label="Visitar meu GitHub"
+                class="bg-icon"
+              >
+                <i class="bx bxl-github" aria-hidden="true"></i>
+                <span></span>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                aria-label="Visitar meu Twitter"
+                class="bg-icon"
+              >
+                <i class="bx bxl-twitter" aria-hidden="true"></i>
+                <span></span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/rahian-s-s/"
+                target="_blank"
+                aria-label="Visitar meu LinkedIn"
+                class="bg-icon"
+              >
+                <i class="bx bxl-linkedin" aria-hidden="true"></i>
+                <span></span>
+              </a>
+            </div>
+          </div>
+          <!-- Imagem do herói -->
+          <div class="img-hero">
+            <img src="assets/img.png" alt="Logo de Razor, uma ave estilizada." />
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Habilidades -->
+      <section id="habilidades" class="skills portfolio-section">
+        <div class="container">
+          <h2>Minhas Habilidades</h2>
+          <!-- Grid de habilidades -->
+          <div class="skills-grid">
+            <!-- Item de habilidade: HTML -->
+            <div class="skill-item">
+              <h3>HTML</h3>
+              <p>
+                Criação de estruturas semânticas, acessíveis e bem organizadas
+                para a web moderna.
+              </p>
+            </div>
+            <!-- Item de habilidade: CSS -->
+            <div class="skill-item">
+              <h3>CSS</h3>
+              <p>
+                Estilização responsiva e moderna, com foco em layouts flexíveis,
+                animações e pré-processadores.
+              </p>
+            </div>
+            <!-- Item de habilidade: JavaScript -->
+            <div class="skill-item">
+              <h3>JavaScript</h3>
+              <p>
+                Desenvolvimento de interações dinâmicas e funcionais, utilizando
+                as melhores práticas do ES6+.
+              </p>
+            </div>
+            <!-- Item de habilidade: React -->
+            <div class="skill-item">
+              <h3>React</h3>
+              <p>
+                Construção de interfaces reativas e componentizadas com os
+                principais frameworks do mercado.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Projetos -->
+      <section id="projetos" class="projects portfolio-section">
+        <div class="container">
+          <h2>Meus Projetos</h2>
+          <!-- Wrapper para o carrossel de projetos -->
+          <div class="projects-carousel-wrapper">
+            <!-- Botão para navegar para o projeto anterior no carrossel -->
+            <button
+              id="prev-project"
+              class="carousel-button prev"
+              aria-label="Projeto Anterior"
+            >
+              <
+            </button>
+            <!-- Grid de projetos -->
+            <div class="projects-grid">
+              <!-- Item de projeto: Acessibilidade Web 2.0 -->
+              <figure class="project-item">
+                <img
+                  src="assets/Acessibilidade.png"
+                  alt="Preview do projeto sobre acessibilidade web."
+                />
+                <figcaption>
+                  <h3>Acessibilidade Web 2.0</h3>
+                  <p>
+                    Projeto focado em demonstrar e explorar os desafios comuns
+                    de acessibilidade na web.
+                  </p>
+                  <div class="project-links">
+                    <a
+                      href="https://therazorbill.github.io/Acessibilidade-Web-2.0/"
+                      target="_blank"
+                      class="btn"
+                      >Ver Projeto</a
+                    >
+                    <a
+                      href="https://github.com/TheRazorbill/Acessibilidade-Web-2.0"
+                      target="_blank"
+                      class="btn"
+                      >GitHub</a
+                    >
+                  </div>
+                </figcaption>
+              </figure>
+              <!-- Item de projeto: Página de Login -->
+              <figure class="project-item">
+                <img
+                  src="assets/Pagina de login.png"
+                  alt="Preview de uma página de login com fundo azul."
+                />
+                <figcaption>
+                  <h3>Página de Login</h3>
+                  <p>
+                    Interface de login completa com campos para email, senha e
+                    opções de registro.
+                  </p>
+                  <div class="project-links">
+                    <a
+                      href="https://therazorbill.github.io/Pagina-de-login/"
+                      target="_blank"
+                      class="btn"
+                      >Ver Projeto</a
+                    >
+                    <a
+                      href="https://github.com/TheRazorbill/Pagina-de-login"
+                      target="_blank"
+                      class="btn"
+                      >GitHub</a
+                    >
+                  </div>
+                </figcaption>
+              </figure>
+
+              <figure class="project-item">
+                <img
+                  src="assets/app-produtividade.png"
+                  alt="Preview de uma página TO-Do LIST."
+                />
+                <figcaption>
+                  <h3>To-Do List</h3>
+                  <p>
+                    Este repositório contém o código de uma aplicação simples e funcional de lista de tarefas (To-Do List). O projeto foi desenvolvido com foco na manipulação do DOM e na interatividade do usuário, utilizando apenas HTML, CSS e JavaScript puro.
+                  </p>
+                  <div class="project-links">
+                    <a
+                      href="https://therazorbill.github.io/app-produtividade/"
+                      target="_blank"
+                      class="btn"
+                      >Ver Projeto</a
+                    >
+                    <a
+                      href="https://github.com/TheRazorbill/app-produtividade"
+                      target="_blank"
+                      class="btn"
+                      >GitHub</a
+                    >
+                  </div>
+                </figcaption>
+              </figure>
+
+              <figure class="project-item">
+                <img
+                  src="assets/Estude+inteligente.png"
+                  alt="Preview de uma página de estudos."
+                />
+                <figcaption>
+                  <h3>Estude + Inteligente</h3>
+                  <p>
+                    O projeto "Estude + Inteligente" é uma plataforma web desenvolvida para auxiliar estudantes a descobrir seu estilo de aprendizagem predominante e a encontrar recursos relevantes, como livros, para otimizar seus estudos.
+                  </p>
+                  <div class="project-links">
+                    <a
+                      href="https://estude-mais-inteligente.netlify.app/"
+                      target="_blank"
+                      class="btn"
+                      >Ver Projeto</a
+                    >
+                    <a
+                      href="https://github.com/TheRazorbill/Estude-Inteligente"
+                      target="_blank"
+                      class="btn"
+                      >GitHub</a
+                    >
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <!-- Botão para navegar para o próximo projeto no carrossel -->
+            <button
+              id="next-project"
+              class="carousel-button next"
+              aria-label="Próximo Projeto"
+            >
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Contato -->
+      <section id="contato" class="contact portfolio-section">
+        <div class="container">
+          <h2>Entre em Contato</h2>
+          <p>
+            Tem uma ideia ou um projeto em mente? Vamos conversar. Preencha o
+            formulário ou me encontre nas redes sociais.
+          </p>
+          <!-- Formulário de contato -->
+          <form action="#" method="POST">
+            <input type="text" name="nome" placeholder="Seu Nome" required />
+            <input type="email" name="email" placeholder="Seu Email" required />
+            <textarea
+              name="mensagem"
+              placeholder="Sua Mensagem"
+              rows="6"
+              required
+            ></textarea>
+            <button type="submit" class="btn">Enviar Mensagem</button>
+          </form>
+          <!-- Links sociais adicionais na seção de contato -->
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/rahian-s-s/" target="_blank"
+              >LinkedIn</a
+            >
+            <a href="https://github.com/TheRazorbill" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Rahian-s-s. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript, com 'defer' para carregar após o HTML -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
