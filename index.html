@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfólio de Razor, Desenvolvedor Web." />
     <title>Portfólio | Razor</title>
+    <link rel="icon" href="assets/logo.png" type="image/png" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -14,12 +15,13 @@
   <body>
     <div class="overlay"></div>
     <header>
-      <a href="#home" class="logo"><span>R</span>ahian</a>
+      <a href="#home" class="logo"><img src="assets/logo.png" width="100px" height="auto" alt="rahian-s-s logo"></a>
       <nav>
         <ul class="navlist">
           <li><a href="#home" class="active">Início</a></li>
           <li><a href="#habilidades">Habilidades</a></li>
           <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#certificacoes">Certificações</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
@@ -62,30 +64,12 @@
 
             <div class="social-media">
               <a
-                href="#"
-                target="_blank"
-                aria-label="Visitar meu Instagram"
-                class="bg-icon"
-              >
-                <i class="bx bxl-instagram" aria-hidden="true"></i>
-                <span></span>
-              </a>
-              <a
                 href="https://github.com/TheRazorbill"
                 target="_blank"
                 aria-label="Visitar meu GitHub"
                 class="bg-icon"
               >
                 <i class="bx bxl-github" aria-hidden="true"></i>
-                <span></span>
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                aria-label="Visitar meu Twitter"
-                class="bg-icon"
-              >
-                <i class="bx bxl-twitter" aria-hidden="true"></i>
                 <span></span>
               </a>
               <a
@@ -100,7 +84,7 @@
             </div>
           </div>
           <div class="img-hero">
-            <img src="assets/img.png" alt="Logo de Razor, uma ave estilizada." />
+            <img src="assets/img.png?v=2" alt="Foto do Rahian" />
           </div>
         </div>
       </section>
@@ -136,6 +120,51 @@
                 Adicionando Tipagem estática, classes e interfaces, permitindo desenvolver aplicações grandes e escaláveis com mais segurança e ferramentas aprimoradas.
               </p>
             </div>
+            <div class="skill-item">
+              <h3>React</h3>
+              <p>
+                Desenvolvimento de componentes reutilizáveis, gerenciamento de estado e construção de interfaces interativas com a biblioteca mais popular do ecossistema JavaScript.
+              </p>
+            </div>
+            <div class="skill-item">
+              <h3>Node.js</h3>
+              <p>
+                Desenvolvimento de servidores backend escaláveis, APIs RESTful e aplicações full-stack utilizando JavaScript no servidor.
+              </p>
+            </div>
+            <div class="skill-item">
+              <h3>APIs REST</h3>
+              <p>
+                Design e implementação de APIs RESTful para comunicação eficiente entre cliente e servidor, seguindo os melhores padrões e convenções.
+              </p>
+            </div>
+            <div class="skill-item skill-item-hidden">
+              <h3>Tailwind CSS</h3>
+              <p>
+                Framework CSS utilitário para prototipagem rápida e construção de interfaces modernas, responsivas e altamente customizáveis.
+              </p>
+            </div>
+            <div class="skill-item skill-item-hidden">
+              <h3>Vite</h3>
+              <p>
+                Build tool moderno para desenvolvimento rápido, com hot module replacement instant e otimizações de produção configuráveis.
+              </p>
+            </div>
+            <div class="skill-item skill-item-hidden">
+              <h3>Git</h3>
+              <p>
+                Controle de versão avançado, branching, merging, colaboração em equipe e workflows modernos para desenvolvimento de software.
+              </p>
+            </div>
+            <div class="skill-item skill-item-hidden">
+              <h3>UX/UI Design</h3>
+              <p>
+                Design centrado no usuário, prototipagem, wireframes, pesquisa em UX e criação de interfaces intuitivas e acessíveis.
+              </p>
+            </div>
+          </div>
+          <div class="view-more-container">
+            <button class="btn-view-more" id="skills-toggle">Saiba Mais</button>
           </div>
         </div>
       </section>
@@ -326,6 +355,199 @@
         </div>
       </section>
 
+      <section id="certificacoes" class="certifications portfolio-section">
+        <div class="container">
+          <h2>Certificações & Educação</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-time">February 2026</div>
+              <div class="timeline-card">
+                <h3>Google</h3>
+                <p>
+                  <strong>Foundations of User Experience (UX) Design</strong><br />
+                  Design centrado no usuário, framework de design thinking, acessibilidade, design inclusivo, métodos de pesquisa em UX, wireframes, protótipos e design sprints.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-time">February 2026</div>
+              <div class="timeline-card">
+                <h3>SENAI/SC — Programa SCTEC</h3>
+                <p>
+                  <strong>Full-Stack Development (518h)</strong><br />
+                  React, Node.js, APIs REST, Mobile, Cloud & DevOps<br />
+                  Feb 2026 — Dec 2026
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-time">February 2026</div>
+              <div class="timeline-card">
+                <h3>SENAI</h3>
+                <p>
+                  <strong>Inglês Técnico Aplicado ao Desenvolvimento de Sistemas</strong><br />
+                  English for technical communication in software development
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-time">February 2026</div>
+              <div class="timeline-card">
+                <h3>Scrimba</h3>
+                <p>
+                  <strong>Tailwind CSS</strong><br />
+                  Utility-first CSS framework fundamentals
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-time">January 2026</div>
+              <div class="timeline-card">
+                <h3>Frontend Masters</h3>
+                <p>
+                  <strong>TypeScript 5+ Fundamentals, v4</strong><br />
+                  Advanced TypeScript features and best practices
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-time">January 2026</div>
+              <div class="timeline-card">
+                <h3>Scrimba</h3>
+                <p>
+                  <strong>Vite</strong><br />
+                  Modern build tool and development server
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-time">January 2026</div>
+              <div class="timeline-card">
+                <h3>Frontend Masters</h3>
+                <p>
+                  <strong>TypeScript: From First Steps to Professional</strong><br />
+                  Complete TypeScript fundamentals and practical application
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-time">January 2026</div>
+              <div class="timeline-card">
+                <h3>Frontend Masters</h3>
+                <p>
+                  <strong>Deep JavaScript Foundations, v3</strong><br />
+                  Advanced JavaScript: scope, closures, prototypes, async patterns
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-time">January 2026</div>
+              <div class="timeline-card">
+                <h3>freeCodeCamp</h3>
+                <p>
+                  <strong>Responsive Web Design</strong><br />
+                  HTML5, CSS3, Flexbox, media queries, accessibility, UX/UI best practices
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-time">January 2026</div>
+              <div class="timeline-card">
+                <h3>FIAP</h3>
+                <p>
+                  <strong>Engenharia de Software - Nano Course</strong><br />
+                  Software engineering principles and methodologies
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-time">January 2026</div>
+              <div class="timeline-card">
+                <h3>IBM | Codecademy</h3>
+                <p>
+                  <strong>Learn JavaScript</strong><br />
+                  JavaScript fundamentals through IBM SkillsBuild
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-time">January 2026</div>
+              <div class="timeline-card">
+                <h3>EF SET</h3>
+                <p>
+                  <strong>English Certificate C2 Proficient</strong><br />
+                  Score: 73/100 — Advanced professional English proficiency
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item timeline-item-hidden">
+              <div class="timeline-time">December 2025</div>
+              <div class="timeline-card">
+                <h3>Frontend Masters</h3>
+                <p>
+                  <strong>Everything You'll Need to Know About Git</strong><br />
+                  Version control, branching, merging, collaboration workflows
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item timeline-item-hidden">
+              <div class="timeline-time">December 2025</div>
+              <div class="timeline-card">
+                <h3>Frontend Masters</h3>
+                <p>
+                  <strong>JavaScript: The Hard Parts, v2</strong><br />
+                  Callbacks, closures, asynchronous JavaScript, promises
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item timeline-item-hidden">
+              <div class="timeline-time">December 2025</div>
+              <div class="timeline-card">
+                <h3>Frontend Masters</h3>
+                <p>
+                  <strong>JavaScript: From First Steps to Professional</strong><br />
+                  Core JavaScript concepts and professional development practices
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item timeline-item-hidden">
+              <div class="timeline-time">September 2025</div>
+              <div class="timeline-card">
+                <h3>DIO</h3>
+                <p>
+                  <strong>GFT Start #6 - Lógica de Programação</strong><br />
+                  Programming logic and problem-solving fundamentals
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item timeline-item-hidden">
+              <div class="timeline-time">August 2025</div>
+              <div class="timeline-card">
+                <h3>Cruzeiro do Sul Virtual</h3>
+                <p>
+                  <strong>Bachelor Degree — Computer Science</strong><br />
+                  Focus: Front-end Development, Software Engineering, Algorithms, Data Structures, UX Design<br />
+                  Expected Graduation: Jun 2029
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item timeline-item-hidden">
+              <div class="timeline-time">July 2025</div>
+              <div class="timeline-card">
+                <h3>IFRS</h3>
+                <p>
+                  <strong>Programador Web</strong><br />
+                  Web development fundamentals: HTML, CSS, and JavaScript
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="view-more-container">
+            <button class="btn-view-more" id="certifications-toggle">Saiba Mais</button>
+          </div>
+        </div>
+      </section>
+
       <section id="contato" class="contact portfolio-section">
         <div class="container">
           <h2>Entre em Contato</h2>
@@ -367,20 +589,15 @@
                         <li><a href="#home">Início</a></li>
                         <li><a href="#habilidades">Habilidades</a></li>
                         <li><a href="#projetos">Projetos</a></li>
+                      <li><a href="#certificacoes">Certificações</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
                     <h3>Conecte-se Comigo</h3>
                     <div class="social-media">
-                        <a href="#" target="_blank" aria-label="Visitar meu Instagram" class="bg-icon">
-                            <i class="bx bxl-instagram" aria-hidden="true"></i>
-                        </a>
                         <a href="https://github.com/TheRazorbill" target="_blank" aria-label="Visitar meu GitHub" class="bg-icon">
                             <i class="bx bxl-github" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" target="_blank" aria-label="Visitar meu Twitter" class="bg-icon">
-                            <i class="bx bxl-twitter" aria-hidden="true"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/rahian-s-s/" target="_blank" aria-label="Visitar meu LinkedIn" class="bg-icon">
                             <i class="bx bxl-linkedin" aria-hidden="true"></i>

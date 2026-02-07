@@ -179,4 +179,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCarouselButtons();
   }
+
+  // Skills and Certifications View More Toggle
+  const skillsToggle = document.getElementById("skills-toggle");
+  const certificationsToggle = document.getElementById("certifications-toggle");
+
+  if (skillsToggle) {
+    skillsToggle.addEventListener("click", () => {
+      const hiddenSkills = document.querySelectorAll(".skill-item-hidden");
+      const isExpanded = skillsToggle.dataset.expanded === "true";
+      
+      hiddenSkills.forEach(skill => {
+        skill.classList.toggle("visible", !isExpanded);
+      });
+      
+      skillsToggle.dataset.expanded = !isExpanded;
+      skillsToggle.textContent = isExpanded ? "Saiba Mais" : "Ver Menos";
+    });
+  }
+
+  if (certificationsToggle) {
+    certificationsToggle.addEventListener("click", () => {
+      const hiddenCerts = document.querySelectorAll(".timeline-item-hidden");
+      const isExpanded = certificationsToggle.dataset.expanded === "true";
+      
+      hiddenCerts.forEach(cert => {
+        cert.classList.toggle("visible", !isExpanded);
+      });
+      
+      certificationsToggle.dataset.expanded = !isExpanded;
+      certificationsToggle.textContent = isExpanded ? "Saiba Mais" : "Ver Menos";
+    });
+  }
 });
