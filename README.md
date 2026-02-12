@@ -65,6 +65,7 @@ Você pode entrar em contato comigo através das minhas redes:
 
 ##  Visualização
 
-![Prévia do Portfólio](https://github.com/user-attachments/assets/f867df6c-906f-437a-b663-4889b855f108)
+<img width="3360" height="1790" alt="image" src="https://github.com/user-attachments/assets/c10b8c26-9ccd-402d-90e5-3d4cbf6d27ab" />
+
 
 ---
