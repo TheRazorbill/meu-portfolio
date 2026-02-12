@@ -20,6 +20,7 @@ O portfólio está estruturado com as seguintes seções:
 - **Seção Hero:** Uma seção de boas-vindas impactante para causar uma primeira impressão positiva.
 - **Habilidades:** Uma área dedicada para listar minhas competências técnicas e ferramentas que utilizo.
 - **Galeria de Projetos:** Uma vitrine para exibir meus principais trabalhos, com links para os projetos ao vivo e seus respectivos repositórios.
+- **Certificações & Educação:** Uma seção para organizar algumas de minhas certificacoes.
 - **Contato:** Uma seção para facilitar o contato profissional, com links para redes sociais e e-mail.
 - **Design Responsivo:** Layout totalmente adaptável para uma experiência de usuário consistente em desktops, tablets e smartphones.
 
