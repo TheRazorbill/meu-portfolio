@@ -74,7 +74,7 @@
           <button id="sidebarContactBtn" class="btn-primary" data-i18n="sidebar_contact_btn">
             Fale Comigo
           </button>
-          <a href="#" class="btn-secondary" id="sidebarCvBtn" data-i18n="download_cv" role="button" aria-label="Baixar Currículo / Download CV">
+          <a href="assets/curriculo-rahian.txt" download="curriculo-rahian.txt" class="btn-secondary" id="sidebarCvBtn" data-i18n="download_cv" role="button" aria-label="Baixar Currículo / Download CV">
             Download CV
           </a>
         </div>
@@ -350,21 +350,14 @@
               <div class="tab-view" id="tab-contact" role="tabpanel" aria-labelledby="tablist-contact">
                 <div class="contact-panel">
                   <p data-i18n="contact_subtitle">Tem uma ideia ou um projeto em mente? Vamos conversar. Preencha os parâmetros abaixo para instanciar o contato.</p>
-                  <form action="#" method="POST" id="contactForm" aria-label="Instanciar Contato / Contact Form">
-                    <div class="contact-group">
-                      <label for="contact-name" data-i18n="contact_name">Seu Nome</label>
-                      <input type="text" id="contact-name" name="nome" autocomplete="name" required aria-required="true" />
-                    </div>
-                    <div class="contact-group">
-                      <label for="contact-email" data-i18n="contact_email">Seu Email</label>
-                      <input type="email" id="contact-email" name="email" autocomplete="email" required aria-required="true" />
-                    </div>
-                    <div class="contact-group">
-                      <label for="contact-message" data-i18n="contact_message">Sua Mensagem</label>
-                      <textarea id="contact-message" name="mensagem" required aria-required="true"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary" data-i18n="contact_submit" style="width: auto;">Enviar Mensagem</button>
-                  </form>
+                  <div class="contact-links-grid">
+                    <a href="https://github.com/TheRazorbill" target="_blank" class="btn-primary contact-link-card">
+                      <i class="bx bxl-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/rahian" target="_blank" class="btn-secondary contact-link-card">
+                      <i class="bx bxl-linkedin"></i> LinkedIn
+                    </a>
+                  </div>
                 </div>
               </div>
 
