@@ -137,6 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   let currentLang = localStorage.getItem("portfolio_lang") || "pt";
+  if (currentLang !== "pt" && currentLang !== "en") {
+    currentLang = "pt";
+  }
 
   const dom = {
     typewriterText: document.querySelector(".typewriter-text"),
