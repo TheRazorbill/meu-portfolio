@@ -6,473 +6,356 @@
     <meta name="description" content="Portfólio de Rahian Santos, Desenvolvedor Full-Stack JavaScript." />
     <title>Portfólio | Rahian Santos</title>
     <link rel="icon" href="assets/logo.png" type="image/png" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="overlay"></div>
-    <header>
-      <div style="display: flex; align-items: center; gap: 16px;">
-        <a href="#home" class="logo"><img src="assets/logo.png" width="100px" height="auto" alt="Rahian Santos logo"></a>
-        <div class="status-badge">
-          <span class="status-dot"></span>
-          <span data-i18n="status_active">STATUS: ATIVO</span>
-        </div>
-      </div>
-      <nav>
-        <ul class="navlist">
-          <li><a href="#home" class="active" data-i18n="nav_home">Início</a></li>
-          <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
-          <li><a href="#projetos" data-i18n="nav_projects">Projetos</a></li>
-          <li><a href="#certificacoes" data-i18n="nav_certs">Experiência & Educação</a></li>
-          <li><a href="#contato" data-i18n="nav_contact">Contato</a></li>
-        </ul>
-      </nav>
-      <div class="right-header">
-        <div class="lang-switcher">
-          <button id="lang-pt" class="lang-btn active">PT</button>
-          <span class="lang-divider">|</span>
-          <button id="lang-en" class="lang-btn">EN</button>
-        </div>
-        <a href="#contato" class="btn" data-i18n="contact_btn"
-          >Fale Comigo <i class="bx bx-send"></i
-        ></a>
-        <div class="menu-icon" aria-label="Abrir Menu" aria-expanded="false">
-          <div class="bar"></div>
-        </div>
-      </div>
-    </header>
 
-    <main id="main-content">
-      <section class="home" id="home">
-        <div class="container">
-          <div class="hero-info">
-            <h3 data-i18n="welcome">Seja Bem-Vindo</h3>
-            <h1 data-i18n="name">Olá, eu sou o Rahian</h1>
-
-            <div class="text-animated">
-              <h2 class="typewriter-text"></h2>
+    <div class="app-container">
+      
+      <!-- Sidebar Control Column -->
+      <aside class="sidebar">
+        <div>
+          <div class="brand-section">
+            <div class="brand-logo">R</div>
+            <span class="brand-name">Rahian Santos</span>
+          </div>
+          
+          <div class="section-label" data-i18n="section_profile">Perfil de Engenharia</div>
+          
+          <div class="profile-panel">
+            <div class="profile-row">
+              <span class="label" data-i18n="profile_role_label">Função Principal</span>
+              <span class="value typewriter-text"></span>
             </div>
-
-            <p data-i18n="description">
-              Desenvolvedor Full-Stack JavaScript e graduando em Ciência da Computação. Contribuidor do Google Summer of Code 2026 na Rocket.Chat, focado em construir aplicações web robustas, performáticas e acessíveis.
-            </p>
-
-            <div class="btn-box">
-              <a href="#contato" class="btn" data-i18n="hire_me"
-                >Contrate-me! <i class="bx bx-right-arrow-alt"></i
-              ></a>
-              <a href="#" class="btn d-CV" data-i18n="download_cv"
-                >Download CV <i class="bx bx-download"></i
-              ></a>
+            <div class="profile-row">
+              <span class="label" data-i18n="profile_base_label">Base Operacional</span>
+              <span class="value" data-i18n="profile_base_val">Brasil / Remoto</span>
             </div>
-
-            <div class="social-media">
-              <a
-                href="https://github.com/TheRazorbill"
-                target="_blank"
-                aria-label="Visitar meu GitHub"
-                class="bg-icon"
-              >
-                <i class="bx bxl-github" aria-hidden="true"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/rahian"
-                target="_blank"
-                aria-label="Visitar meu LinkedIn"
-                class="bg-icon"
-              >
-                <i class="bx bxl-linkedin" aria-hidden="true"></i>
-              </a>
+            <div class="profile-row">
+              <span class="label" data-i18n="profile_status_label">Status de Contratos</span>
+              <span class="value" style="display: flex; align-items: center; gap: 6px;">
+                <span class="status-dot"></span>
+                <span data-i18n="status_active">Ativo & Disponível</span>
+              </span>
             </div>
           </div>
-          <div class="img-hero">
-            <img src="assets/img.png?v=2" alt="Foto do Rahian" />
+
+          <div class="lang-switcher-group">
+            <label data-i18n="lang_label">Idioma / Language</label>
+            <div class="lang-switcher-buttons">
+              <button id="lang-pt" class="lang-btn active">PT</button>
+              <button id="lang-en" class="lang-btn">EN</button>
+            </div>
           </div>
         </div>
-      </section>
 
-      <section id="habilidades" class="skills portfolio-section">
-        <div class="container">
-          <h2 data-i18n="skills_title">Minhas Habilidades</h2>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <h3>HTML5</h3>
-              <p data-i18n="skill_html">
-                Estruturas semânticas e acessíveis para a web moderna.
-              </p>
-            </div>
-            <div class="skill-item">
-              <h3>CSS3</h3>
-              <p data-i18n="skill_css">
-                Estilização responsiva com Flexbox, Grid e variáveis.
-              </p>
-            </div>
-            <div class="skill-item">
-              <h3>JavaScript</h3>
-              <p data-i18n="skill_js">
-                Comportamentos assíncronos, closures, escopo e manipulação de DOM.
-              </p>
-            </div>
-            <div class="skill-item">
-              <h3>TypeScript</h3>
-              <p data-i18n="skill_ts">
-                Tipagem estática, interfaces e refatoração de código legado com segurança.
-              </p>
-            </div>
-            <div class="skill-item">
-              <h3>React.js</h3>
-              <p data-i18n="skill_react">
-                Componentização, hooks, gerenciamento de estado e arquiteturas modernas.
-              </p>
-            </div>
-            <div class="skill-item">
-              <h3>Node.js</h3>
-              <p data-i18n="skill_node">
-                Backend escalável, APIs RESTful e integração com bancos de dados.
-              </p>
-            </div>
-            <div class="skill-item">
-              <h3>APIs REST</h3>
-              <p data-i18n="skill_api">
-                Design de APIs seguindo padrões REST, rotas e tratamento de erros.
-              </p>
-            </div>
-            <div class="skill-item skill-item-hidden">
-              <h3>Git</h3>
-              <p data-i18n="skill_git">
-                Versionamento semântico, branching, rebase e boas práticas de commits.
-              </p>
-            </div>
-            <div class="skill-item skill-item-hidden">
-              <h3>Automated Testing</h3>
-              <p data-i18n="skill_testing">
-                Testes unitários e de integração utilizando Jest e testes E2E com Playwright.
-              </p>
-            </div>
-            <div class="skill-item skill-item-hidden">
-              <h3>Web Accessibility</h3>
-              <p data-i18n="skill_a11y">
-                Implementação de padrões de acessibilidade (WCAG) e leitores de tela.
-              </p>
-            </div>
-            <div class="skill-item skill-item-hidden">
-              <h3>UX/UI Design</h3>
-              <p data-i18n="skill_ux">
-                Interfaces intuitivas seguindo guias de design (Design System, Figma).
-              </p>
-            </div>
-          </div>
-          <div class="view-more-container">
-            <button class="btn-view-more" id="skills-toggle" data-i18n="skills_toggle_more">Saiba Mais</button>
-          </div>
+        <div>
+          <!-- Sidebar CTA Actions -->
+          <button id="sidebarContactBtn" class="btn-primary" data-i18n="sidebar_contact_btn">
+            Fale Comigo
+          </button>
+          <a href="#" class="btn-secondary" id="sidebarCvBtn" data-i18n="download_cv">
+            Download CV
+          </a>
         </div>
-      </section>
+      </aside>
 
-      <section id="projetos" class="projects portfolio-section">
-        <div class="container">
-          <h2 data-i18n="projects_title">Meus Projetos</h2>
-          <div class="projects-carousel-wrapper">
-            <button
-              id="prev-project"
-              class="carousel-button prev"
-              aria-label="Projeto Anterior"
-            >
-              &lt;
-            </button>
-            <div class="projects-grid">
-              <figure class="project-item">
-                <img
-                  src="https://images.unsplash.com/photo-1618401471353-b98aedd07871?q=80&w=600&auto=format&fit=crop"
-                  alt="Preview do projeto GSoC"
-                />
-                <figcaption>
-                  <h3 data-i18n="project_gsoc_title">Room Header Buttons (GSoC)</h3>
-                  <p data-i18n="project_gsoc_desc">
-                    Desenvolvimento de um sistema de UI modular e customizável para cabeçalhos de chat no Rocket.Chat usando React, TypeScript, Jest e Playwright.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/TheRazorbill/Rocket.Chat"
-                      target="_blank"
-                      class="btn"
-                      >GitHub</a
-                    >
-                  </div>
-                </figcaption>
-              </figure>
+      <!-- Main Workspace Panel -->
+      <main class="main-panel">
+        
+        <!-- Top Status Bar -->
+        <header class="top-header">
+          <h1 class="brand-name" style="font-size: 1.1rem; font-family: var(--font-mono); letter-spacing: 0;" data-i18n="workspace_title">RAHIAN@WORKSPACE:~$</h1>
+          <div class="header-links">
+            <a href="https://github.com/TheRazorbill" target="_blank" class="header-link-item">GitHub</a>
+            <a href="https://www.linkedin.com/in/rahian" target="_blank" class="header-link-item">LinkedIn</a>
+          </div>
+        </header>
 
-              <figure class="project-item">
-                <img
-                  src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=600&auto=format&fit=crop"
-                  alt="Preview Rocket.Chat Apps-Engine"
-                />
-                <figcaption>
-                  <h3 data-i18n="project_rc_core_title">Rocket.Chat Apps-Engine</h3>
-                  <p data-i18n="project_rc_core_desc">
-                    Contribuições no core do Rocket.Chat Apps-Engine, refatorando código para TypeScript, garantindo compatibilidade cross-runtime (Node.js/Deno) e tipagem segura.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/TheRazorbill/Rocket.Chat"
-                      target="_blank"
-                      class="btn"
-                      >GitHub</a
-                    >
-                  </div>
-                </figcaption>
-              </figure>
-
-              <figure class="project-item">
-                <img
-                  src="https://images.unsplash.com/photo-1597839219216-a773cb2473e4?q=80&w=600&auto=format&fit=crop"
-                  alt="Preview GitHub Date Editor CLI"
-                />
-                <figcaption>
-                  <h3 data-i18n="project_date_editor_title">GitHub Date Editor</h3>
-                  <p data-i18n="project_date_editor_desc">
-                    Ferramenta CLI interativa em TypeScript para gerenciar históricos de commits, normalizar datas e criar ou emendar commits de forma simples.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/TheRazorbill/HistoryCommitsCLI"
-                      target="_blank"
-                      class="btn"
-                      >GitHub</a
-                    >
-                  </div>
-                </figcaption>
-              </figure>
-
-              <figure class="project-item">
-                <img
-                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop"
-                  alt="Preview AI Intake Assistant"
-                />
-                <figcaption>
-                  <h3 data-i18n="project_intake_title">Assistente de Triagem com IA</h3>
-                  <p data-i18n="project_intake_desc">
-                    Desenvolvimento de assistente automatizado integrando GPT-4o mini e Evolution API para triagem inteligente de leads, reduzindo o tempo de atendimento em 30%.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/TheRazorbill"
-                      target="_blank"
-                      class="btn"
-                      >GitHub</a
-                    >
-                  </div>
-                </figcaption>
-              </figure>
+        <!-- Split Layout workspace -->
+        <div class="content-area">
+          
+          <!-- Left timeline stream of thoughts/actions -->
+          <section class="timeline-panel">
+            <div class="timeline-header">
+              <div class="section-label" style="margin-bottom: 0;" data-i18n="timeline_title">Experiência & Formação</div>
+              <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted);" data-i18n="timeline_count">Registros: 5 / 5</span>
             </div>
-            <button
-              id="next-project"
-              class="carousel-button next"
-              aria-label="Próximo Projeto"
-            >
-              &gt;
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section id="certificacoes" class="certifications portfolio-section">
-        <div class="container">
-          <h2 data-i18n="certs_title">Experiência & Formação</h2>
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-time" data-i18n="timeline_gsoc_date">Abril 2026 - Presente</div>
-              <div class="timeline-card">
-                <h3 data-i18n="gsoc_role">Contribuidor Google Summer of Code</h3>
-                <p>
-                  <strong>Rocket.Chat</strong><br />
-                  <span data-i18n="gsoc_details">Desenvolvimento do projeto 'Room Header Buttons Ordering' utilizando TypeScript, React, Fuselage, Jest e Playwright, com foco em acessibilidade (a11y) e testes automatizados.</span>
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-time" data-i18n="timeline_rc_date">Janeiro 2026 - Presente</div>
-              <div class="timeline-card">
-                <h3 data-i18n="rc_role">Contribuidor Open Source</h3>
-                <p>
-                  <strong>Rocket.Chat</strong><br />
-                  <span data-i18n="rc_details">Melhoria do core do Apps-Engine da Rocket.Chat, refatoração de código legado para TypeScript com JsonValue recursivo, compatibilidade Node.js/Deno e Yarn Workspaces/Turbo.</span>
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-time" data-i18n="timeline_rs_date">Janeiro 2025 - Janeiro 2026</div>
-              <div class="timeline-card">
-                <h3 data-i18n="rs_role">Especialista em Tecnologia e Design</h3>
-                <p>
-                  <strong>RS Advocacia</strong><br />
-                  <span data-i18n="rs_details">Engenharia de assistente de atendimento automatizado integrado com GPT-4o mini e Evolution API na RS Advocacia, reduzindo em 30% o tempo de triagem manual.</span>
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-time" data-i18n="timeline_cs_date">Agosto 2025 - Junho 2029</div>
-              <div class="timeline-card">
-                <h3 data-i18n="edu_cs_role">Ciência da Computação (Bacharelado)</h3>
-                <p>
-                  <strong>Cruzeiro do Sul Virtual</strong><br />
-                  <span data-i18n="edu_cs_details">Cruzeiro do Sul Virtual. Foco em Engenharia de Software, Algoritmos, UX Design e Engenharia de Sistemas.</span>
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item timeline-item-hidden">
-              <div class="timeline-time" data-i18n="timeline_backend_date">Fevereiro 2026 - Dezembro 2026</div>
-              <div class="timeline-card">
-                <h3 data-i18n="edu_backend_role">Desenvolvimento de Software Backend</h3>
-                <p>
-                  <strong>SENAI/SC — Programa SCTEC</strong><br />
-                  <span data-i18n="edu_backend_details">SENAI/SC (Programa SCTEC). Formação prática voltada a APIs em Node.js, Cloud Computing e práticas de DevOps.</span>
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item timeline-item-hidden">
-              <div class="timeline-time">Abril 2026</div>
-              <div class="timeline-card">
-                <h3>Full Stack Fundamentals</h3>
-                <p>
-                  <strong>Frontend Masters</strong><br />
-                  Credential ID: cba3242b6a-pApqiQbIWA
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item timeline-item-hidden">
-              <div class="timeline-time">Abril 2026</div>
-              <div class="timeline-card">
-                <h3>Software Engineering</h3>
-                <p>
-                  <strong>The Hong Kong University of Science and Technology</strong><br />
-                  Credential ID: SGAKJ4643TWY
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item timeline-item-hidden">
-              <div class="timeline-time">Março 2026</div>
-              <div class="timeline-card">
-                <h3>Duolingo English Score 130</h3>
-                <p>
-                  <strong>Duolingo</strong><br />
-                  Advanced professional English proficiency.
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item timeline-item-hidden">
-              <div class="timeline-time">Fevereiro 2026</div>
-              <div class="timeline-card">
-                <h3>Foundations of User Experience (UX) Design</h3>
-                <p>
-                  <strong>Google</strong><br />
-                  Design centrado no usuário, acessibilidade, wireframes e pesquisa em UX.
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item timeline-item-hidden">
-              <div class="timeline-time">Janeiro 2026</div>
-              <div class="timeline-card">
-                <h3>TypeScript 5+ Fundamentals</h3>
-                <p>
-                  <strong>Frontend Masters</strong><br />
-                  Advanced TypeScript features and best practices.
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item timeline-item-hidden">
-              <div class="timeline-time">Janeiro 2026</div>
-              <div class="timeline-card">
-                <h3>Deep JavaScript Foundations</h3>
-                <p>
-                  <strong>Frontend Masters</strong><br />
-                  Advanced JavaScript scope, closures, prototypes, and async behavior.
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item timeline-item-hidden">
-              <div class="timeline-time">Janeiro 2026</div>
-              <div class="timeline-card">
-                <h3>English Certificate C2 Proficient</h3>
-                <p>
-                  <strong>EF SET</strong><br />
-                  Score: 73/100 — Profissional avançado.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div class="view-more-container">
-            <button class="btn-view-more" id="certifications-toggle" data-i18n="certs_toggle_more">Saiba Mais</button>
-          </div>
-        </div>
-      </section>
-
-      <section id="contato" class="contact portfolio-section">
-        <div class="container">
-          <h2 data-i18n="contact_title">Entre em Contato</h2>
-          <p data-i18n="contact_subtitle">
-            Tem uma ideia ou um projeto em mente? Vamos conversar. Preencha o
-            formulário ou me encontre nas redes sociais.
-          </p>
-          <form action="#" method="POST">
-            <input type="text" name="nome" placeholder="Seu Nome" required data-i18n-placeholder="contact_name" />
-            <input type="email" name="email" placeholder="Seu Email" required data-i18n-placeholder="contact_email" />
-            <textarea
-              name="mensagem"
-              placeholder="Sua Mensagem"
-              rows="6"
-              required
-              data-i18n-placeholder="contact_message"
-            ></textarea>
-            <button type="submit" class="btn" data-i18n="contact_submit">Enviar Mensagem</button>
-          </form>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/rahian" target="_blank"
-              >LinkedIn</a
-            >
-            <a href="https://github.com/TheRazorbill" target="_blank">GitHub</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Rahian Santos</h3>
-                    <p data-i18n="footer_text">Desenvolvedor Full-Stack JavaScript focado em criar soluções digitais sólidas e eficientes.</p>
+            
+            <div class="stream-container">
+              <!-- Item 1: GSoC -->
+              <div class="stream-card thought">
+                <div class="card-header">
+                  <span data-i18n="timeline_gsoc_date">Abril 2026 - Presente</span>
+                  <span data-i18n="badge_gsoc">GSoC '26</span>
                 </div>
-                <div class="footer-links">
-                    <h3 data-i18n="footer_links">Links Úteis</h3>
+                <h3 class="card-title" data-i18n="gsoc_role">Contribuidor Google Summer of Code</h3>
+                <h4 class="card-subtitle">Rocket.Chat</h4>
+                <div class="card-content" data-i18n="gsoc_details">
+                  Desenvolvimento do projeto 'Room Header Buttons Ordering' utilizando TypeScript, React, Fuselage, Jest e Playwright, com foco em acessibilidade (a11y) e testes.
+                </div>
+                <div class="card-tool-tag">TypeScript</div>
+                <div class="card-tool-tag">React</div>
+                <div class="card-tool-tag">Playwright</div>
+              </div>
+
+              <!-- Item 2: Open Source -->
+              <div class="stream-card action">
+                <div class="card-header">
+                  <span data-i18n="timeline_rc_date">Janeiro 2026 - Presente</span>
+                  <span data-i18n="badge_oss">Open Source</span>
+                </div>
+                <h3 class="card-title" data-i18n="rc_role">Contribuidor Open Source</h3>
+                <h4 class="card-subtitle">Rocket.Chat</h4>
+                <div class="card-content" data-i18n="rc_details">
+                  Melhoria do core do Apps-Engine da Rocket.Chat, refatorando código legado para TypeScript com JsonValue recursivo, compatibilidade Node.js/Deno e Yarn/Turbo.
+                </div>
+                <div class="card-tool-tag">TypeScript</div>
+                <div class="card-tool-tag">Deno</div>
+                <div class="card-tool-tag">Yarn Workspaces</div>
+              </div>
+
+              <!-- Item 3: RS Advocacia -->
+              <div class="stream-card thought">
+                <div class="card-header">
+                  <span data-i18n="timeline_rs_date">Janeiro 2025 - Janeiro 2026</span>
+                  <span data-i18n="badge_freelance">Freelance</span>
+                </div>
+                <h3 class="card-title" data-i18n="rs_role">Especialista em Tecnologia e Design</h3>
+                <h4 class="card-subtitle">RS Advocacia</h4>
+                <div class="card-content" data-i18n="rs_details">
+                  Engenharia de assistente de atendimento automatizado integrado com GPT-4o mini e Evolution API na RS Advocacia, reduzindo em 30% o tempo de triagem manual.
+                </div>
+                <div class="card-tool-tag">Node.js</div>
+                <div class="card-tool-tag">GPT-4o mini</div>
+                <div class="card-tool-tag">Automation</div>
+              </div>
+
+              <!-- Item 4: CS Bachelor -->
+              <div class="stream-card action">
+                <div class="card-header">
+                  <span data-i18n="timeline_cs_date">Agosto 2025 - Junho 2029</span>
+                  <span data-i18n="badge_edu">Universidade</span>
+                </div>
+                <h3 class="card-title" data-i18n="edu_cs_role">Ciência da Computação (Bacharelado)</h3>
+                <h4 class="card-subtitle">Cruzeiro do Sul Virtual</h4>
+                <div class="card-content" data-i18n="edu_cs_details">
+                  Cruzeiro do Sul Virtual. Foco em Engenharia de Software, Algoritmos, UX Design e Engenharia de Sistemas.
+                </div>
+                <div class="card-tool-tag">Computer Science</div>
+                <div class="card-tool-tag">Algorithms</div>
+              </div>
+
+              <!-- Item 5: SENAI Backend -->
+              <div class="stream-card thought">
+                <div class="card-header">
+                  <span data-i18n="timeline_backend_date">Fevereiro 2026 - Dezembro 2026</span>
+                  <span data-i18n="badge_tech">Formação Tech</span>
+                </div>
+                <h3 class="card-title" data-i18n="edu_backend_role">Desenvolvimento de Software Backend</h3>
+                <h4 class="card-subtitle">SENAI/SC — Programa SCTEC</h4>
+                <div class="card-content" data-i18n="edu_backend_details">
+                  SENAI/SC (Programa SCTEC). Formação prática voltada a APIs em Node.js, Cloud Computing e práticas de DevOps.
+                </div>
+                <div class="card-tool-tag">Node.js</div>
+                <div class="card-tool-tag">Cloud</div>
+                <div class="card-tool-tag">DevOps</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Right deliverables results tabs -->
+          <section class="results-panel">
+            
+            <nav class="tabs-navigation">
+              <button class="tab-btn active" data-tab="skills" data-i18n="tab_skills">Habilidades</button>
+              <button class="tab-btn" data-tab="projects" data-i18n="tab_projects">Projetos</button>
+              <button class="tab-btn" data-tab="dossier" data-i18n="tab_dossier">Dossiê de Carreira</button>
+              <button class="tab-btn" data-tab="contact" data-i18n="tab_contact">Contato</button>
+            </nav>
+
+            <div class="results-content">
+              
+              <!-- Tab 1: Skills Matrix -->
+              <div class="tab-view active" id="tab-skills">
+                <div class="skills-matrix">
+                  <div class="skills-matrix-card core-tech">
+                    <h3 data-i18n="skills_cat_core">Core Languages</h3>
                     <ul>
-                        <li><a href="#home" data-i18n="nav_home">Início</a></li>
-                        <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
-                        <li><a href="#projetos" data-i18n="nav_projects">Projetos</a></li>
-                        <li><a href="#certificacoes" data-i18n="nav_certs">Experiência & Educação</a></li>
-                        <li><a href="#contato" data-i18n="nav_contact">Contato</a></li>
+                      <li>TypeScript</li>
+                      <li>JavaScript (ES6+)</li>
+                      <li>HTML5</li>
+                      <li>CSS3</li>
                     </ul>
+                  </div>
+                  <div class="skills-matrix-card libraries">
+                    <h3 data-i18n="skills_cat_libs">Frameworks & Libs</h3>
+                    <ul>
+                      <li>React.js</li>
+                      <li>Node.js</li>
+                      <li>Express</li>
+                      <li>Tailwind CSS</li>
+                    </ul>
+                  </div>
+                  <div class="skills-matrix-card testing-tools">
+                    <h3 data-i18n="skills_cat_testing">Testes & Ferramentas</h3>
+                    <ul>
+                      <li>Jest</li>
+                      <li>Playwright</li>
+                      <li>Git / GitHub</li>
+                      <li>Deno</li>
+                    </ul>
+                  </div>
+                  <div class="skills-matrix-card methodology">
+                    <h3 data-i18n="skills_cat_method">Metodologias & UX</h3>
+                    <ul>
+                      <li>Web Accessibility (WCAG)</li>
+                      <li>Figma (Dev Mode)</li>
+                      <li>Design Systems (Fuselage)</li>
+                      <li>REST API Architecture</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="footer-social">
-                    <h3 data-i18n="footer_connect">Conecte-se Comigo</h3>
-                    <div class="social-media">
-                        <a href="https://github.com/TheRazorbill" target="_blank" aria-label="Visitar meu GitHub" class="bg-icon">
-                            <i class="bx bxl-github" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/rahian" target="_blank" aria-label="Visitar meu LinkedIn" class="bg-icon">
-                            <i class="bx bxl-linkedin" aria-hidden="true"></i>
-                        </a>
+              </div>
+
+              <!-- Tab 2: Projects Catalog -->
+              <div class="tab-view" id="tab-projects">
+                <div class="projects-catalog">
+                  <!-- Project 1 -->
+                  <div class="project-card featured">
+                    <div class="project-card-header">
+                      <img
+                        src="https://images.unsplash.com/photo-1618401471353-b98aedd07871?q=80&w=600&auto=format&fit=crop"
+                        alt="Preview GSoC"
+                        class="project-card-image"
+                      />
+                      <h3 class="project-card-name" data-i18n="project_gsoc_title">Room Header Buttons (GSoC)</h3>
+                      <p class="project-card-desc" data-i18n="project_gsoc_desc">
+                        Desenvolvimento de um sistema de UI modular e customizável para cabeçalhos de chat no Rocket.Chat usando React, TypeScript, Jest e Playwright.
+                      </p>
                     </div>
+                    <div class="project-card-tags">
+                      <span>React</span>
+                      <span>TypeScript</span>
+                      <span>Jest</span>
+                      <span>Playwright</span>
+                    </div>
+                    <div class="project-card-footer">
+                      <a href="https://github.com/TheRazorbill/Rocket.Chat" target="_blank" class="btn-primary">GitHub</a>
+                    </div>
+                  </div>
+
+                  <!-- Project 2 -->
+                  <div class="project-card">
+                    <div class="project-card-header">
+                      <img
+                        src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=600&auto=format&fit=crop"
+                        alt="Preview Apps-Engine"
+                        class="project-card-image"
+                      />
+                      <h3 class="project-card-name" data-i18n="project_rc_core_title">Rocket.Chat Apps-Engine</h3>
+                      <p class="project-card-desc" data-i18n="project_rc_core_desc">
+                        Contribuições no core do Rocket.Chat Apps-Engine, refatorando código para TypeScript, garantindo compatibilidade cross-runtime (Node.js/Deno) e tipagem segura.
+                      </p>
+                    </div>
+                    <div class="project-card-tags">
+                      <span>TypeScript</span>
+                      <span>Deno</span>
+                      <span>Monorepo</span>
+                      <span>Turbo</span>
+                    </div>
+                    <div class="project-card-footer">
+                      <a href="https://github.com/TheRazorbill/Rocket.Chat" target="_blank" class="btn-secondary">GitHub</a>
+                    </div>
+                  </div>
+
+                  <!-- Project 3 -->
+                  <div class="project-card">
+                    <div class="project-card-header">
+                      <img
+                        src="https://images.unsplash.com/photo-1597839219216-a773cb2473e4?q=80&w=600&auto=format&fit=crop"
+                        alt="Preview Date Editor"
+                        class="project-card-image"
+                      />
+                      <h3 class="project-card-name" data-i18n="project_date_editor_title">GitHub Date Editor</h3>
+                      <p class="project-card-desc" data-i18n="project_date_editor_desc">
+                        Ferramenta CLI interativa em TypeScript para gerenciar históricos de commits, normalizar datas e criar ou emendar commits de forma simples.
+                      </p>
+                    </div>
+                    <div class="project-card-tags">
+                      <span>TypeScript</span>
+                      <span>Node.js</span>
+                      <span>CLI</span>
+                      <span>Inquirer</span>
+                    </div>
+                    <div class="project-card-footer">
+                      <a href="https://github.com/TheRazorbill/HistoryCommitsCLI" target="_blank" class="btn-secondary">GitHub</a>
+                    </div>
+                  </div>
+
+                  <!-- Project 4 -->
+                  <div class="project-card">
+                    <div class="project-card-header">
+                      <img
+                        src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop"
+                        alt="Preview AI Intake"
+                        class="project-card-image"
+                      />
+                      <h3 class="project-card-name" data-i18n="project_intake_title">Assistente de Triagem com IA</h3>
+                      <p class="project-card-desc" data-i18n="project_intake_desc">
+                        Desenvolvimento de assistente automatizado integrando GPT-4o mini e Evolution API para triagem inteligente de leads, reduzindo o tempo de atendimento em 30%.
+                      </p>
+                    </div>
+                    <div class="project-card-tags">
+                      <span>GPT-4o</span>
+                      <span>Evolution API</span>
+                      <span>Automation</span>
+                    </div>
+                    <div class="project-card-footer">
+                      <a href="https://github.com/TheRazorbill" target="_blank" class="btn-secondary">GitHub</a>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Tab 3: Dossier Terminal -->
+              <div class="tab-view" id="tab-dossier">
+                <div class="dossier-wrapper">
+                  <button class="copy-btn" id="copyDossierBtn" data-i18n="copy_dossier_btn">Copiar Dossiê</button>
+                  <pre class="dossier-content" id="dossierContentText"></pre>
+                </div>
+              </div>
+
+              <!-- Tab 4: Contact Panel -->
+              <div class="tab-view" id="tab-contact">
+                <div class="contact-panel">
+                  <p data-i18n="contact_subtitle">Tem uma ideia ou um projeto em mente? Vamos conversar. Preencha os parâmetros abaixo para instanciar o contato.</p>
+                  <form action="#" method="POST" id="contactForm">
+                    <div class="contact-group">
+                      <label data-i18n="contact_name">Seu Nome</label>
+                      <input type="text" name="nome" required />
+                    </div>
+                    <div class="contact-group">
+                      <label data-i18n="contact_email">Seu Email</label>
+                      <input type="text" name="email" required />
+                    </div>
+                    <div class="contact-group">
+                      <label data-i18n="contact_message">Sua Mensagem</label>
+                      <textarea name="mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" data-i18n="contact_submit" style="width: auto;">Enviar Mensagem</button>
+                  </form>
+                </div>
+              </div>
+
             </div>
-            <div class="footer-bottom">
-                <p data-i18n="footer_copy">&copy; 2026 Rahian Santos. Todos os direitos reservados.</p>
-            </div>
+          </section>
+
         </div>
-    </footer>
+      </main>
+
+    </div>
 
     <script src="script.js" defer></script>
   </body>
