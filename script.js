@@ -162,69 +162,89 @@ document.addEventListener("DOMContentLoaded", () => {
       text = `=====================================================
 RAHIAN SANTOS - DOSSIÊ DE CARREIRA (2026)
 =====================================================
-Função Principal: Desenvolvedor Full-Stack JavaScript
-Base Operacional: Brasil / Remoto
-Status: Ativo & Disponível
+Rahian Santos
+| rahiandasilvasantos@gmail.com | linkedin.com/in/rahian | github.com/TheRazorbill | Brasil
 
-EXPERIÊNCIAS PROFISSIONAIS:
------------------------------------------------------
-- Contribuidor Google Summer of Code @ Rocket.Chat
-  Período: Abril 2026 - Presente
-  Foco: TypeScript, React, Fuselage, Jest, Playwright
+RESUMO PROFISSIONAL
+Desenvolvedor Full-Stack JavaScript e Contribuidor do GSoC '26 no Rocket.Chat, especializado em TypeScript e arquiteturas web escaláveis. Histórico comprovado em refatoração de sistemas legados e implementação de automações baseadas em IA. Focado em qualidade de código, TDD e design modular em ambientes de código aberto de alto impacto.
 
-- Contribuidor Open Source @ Rocket.Chat Apps-Engine
-  Período: Janeiro 2026 - Presente
-  Foco: Tipagem em TS, compatibilidade Node.js/Deno, monorepos
+HABILIDADES
+Linguagens: JavaScript (ES6+), TypeScript (Avançado), SQL, HTML5, CSS3.
+Frameworks e Bibliotecas: React.js (Hooks, Context API), Node.js, Express, Tailwind CSS, Design Systems.
+Ferramentas de Desenvolvimento: Git/GitHub, Docker, Jest (Testes Unitários), Playwright (E2E), Monorepos (Turbo, Yarn), CI/CD.
+Outros: JavaScript Assíncrono, APIs REST, TDD, Inglês Técnico.
 
-- Especialista em Tecnologia e Design @ RS Advocacia
-  Período: Janeiro 2025 - Janeiro 2026
-  Foco: Automação com IA (GPT-4o mini, Evolution API)
+EXPERIÊNCIA PROFISSIONAL
+Rocket.Chat, Remoto | Google Summer of Code (GSoC)	Abril 2026  – Presente
+Stable UI para Milhões de Usuários: Engenharia de um sistema de UI modular e customizável para cabeçalhos de chat usando TypeScript e React.
+Garantia de Qualidade: Mantendo 100% de cobertura de testes por meio de testes Unitários e E2E (Jest, Playwright) para garantir a estabilidade do sistema.
+Acessibilidade (a11y): Implementação de padrões avançados de UI/UX com foco em diretrizes globais de acessibilidade.
 
-EDUCAÇÃO:
------------------------------------------------------
-- Bacharelado em Ciência da Computação
-  Instituição: Cruzeiro do Sul Virtual (2025 - 2029)
-- Desenvolvimento de Software Backend
-  Instituição: SENAI/SC (Programa SCTEC, 2026)
+Rocket.Chat, Remoto | Contribuidor Open Source	Janeiro 2026  – Presente
+Refatoração do Core Engine: Liderou a refatoração do core do Apps-Engine de código legado para TypeScript, implementando tipagens recursivas complexas para maior segurança.
+Compatibilidade Cross-Runtime: Colaborou em um monorepo massivo (Turbo, Yarn) garantindo a compatibilidade entre os ambientes Node.js e Deno.
 
-PRINCIPAIS COMPETÊNCIAS:
------------------------------------------------------
-TypeScript, JavaScript (ES6+), React.js, Node.js, Deno,
-REST APIs, Jest, Playwright, WCAG Accessibility.
+RS Advocacia, Remoto | Especialista em Tecnologia e Automação	Janeiro 2025 – Janeiro 2026
+Automação de Workflows: Desenvolveu um assistente de WhatsApp baseado em IA utilizando n8n e Evolution API, automatizando fluxos de triagem de clientes.
+Transformação Digital: Eliminou a entrada redundante de dados através da automação da coleta de informações jurídicas essenciais, aumentando em 30% a eficiência dos agentes humanos.
+
+PROJETOS
+HistoryCommitsCLI | Node.js, TypeScript	Fevereiro 2026 – Março 2026
+Desenvolveu uma ferramenta de CLI para gerenciar metadados do Git, permitindo sincronização precisa das datas de commit.
+English for Devs | JavaScript, CSS, Gemini AI API	Outubro 2025 – Novembro 2025
+Construiu uma aplicação web mapeando significados em inglês para conceitos técnicos, utilizando Gemini AI para tradução dinâmica de terminologia.
+
+EDUCAÇÃO
+Bacharelado em Ciência da Computação | Cruzeiro do Sul | Brasil	Agosto 2025 – Junho 2029 (Previsão)
+Desenvolvimento Profissional de Software | SENAI/SCTEC | Brasil	Fevereiro 2025 – Novembro 2026 (Previsão)
+
+CERTIFICAÇÕES E IDIOMAS
+Certificações: Meta (React Avançado), IBM (Back-End Apps), Frontend Masters (Deep JS, Testes), Google AI Essentials.
+Idiomas: Português (Nativo), Inglês (Avançado), Espanhol (Profissional).
 =====================================================`;
     } else {
       text = `=====================================================
 RAHIAN SANTOS - CAREER DOSSIER (2026)
 =====================================================
-Primary Role: Full-Stack JavaScript Developer
-Operational Base: Brazil / Remote
-Status: Active & Available
+Rahian Santos
+| rahiandasilvasantos@gmail.com | linkedin.com/in/rahian | github.com/TheRazorbill | Brazil
 
-PROFESSIONAL EXPERIENCE:
------------------------------------------------------
-- Google Summer of Code Contributor @ Rocket.Chat
-  Period: April 2026 - Present
-  Focus: TypeScript, React, Fuselage, Jest, Playwright
+PROFESSIONAL SUMMARY
+Full-Stack JavaScript Developer and GSoC '26 Contributor at Rocket.Chat specializing in TypeScript and scalable web architectures. Proven track record in refactoring legacy systems and implementing AI-driven automations. Focused on code quality, TDD, and modular design in high-impact open-source environments.
 
-- Open Source Contributor @ Rocket.Chat Apps-Engine
-  Period: January 2026 - Present
-  Focus: TypeScript typing, Node.js/Deno compatibility, monorepos
+SKILLS
+Languages: JavaScript (ES6+), TypeScript (Advanced), SQL, HTML5, CSS3.
+Frameworks & Libraries: React.js (Hooks, Context API), Node.js, Express, Tailwind CSS, Design Systems.
+Developer Tools: Git/GitHub, Docker, Jest (Unit Testing), Playwright (E2E), Monorepos (Turbo, Yarn), CI/CD.
+Other: Asynchronous JS, REST APIs, TDD, Technical English.
 
-- Technology & Design Specialist @ RS Advocacia
-  Period: January 2025 - January 2026
-  Focus: AI Automation (GPT-4o mini, Evolution API)
+WORK EXPERIENCE
+Rocket.Chat, Remote | Google Summer of Code (GSoC)	April 2026  – Present
+Stable UI for Millions of Users: Engineering a modular and customizable UI system for chat headers using TypeScript and React.
+Quality Assurance: Maintaining 100% test coverage through Unit and E2E testing (Jest, Playwright) to ensure system stability.
+Accessibility (a11y): Implementing advanced UI/UX patterns with a focus on global accessibility standards.
 
-EDUCATION:
------------------------------------------------------
-- Bachelor's Degree in Computer Science
-  Institution: Cruzeiro do Sul Virtual (2025 - 2029)
-- Backend Software Development
-  Institution: SENAI/SC (SCTEC Program, 2026)
+Rocket.Chat, Remote | Open Source Contributor	Jan 2026  – Present
+Core Engine Refactoring: Spearheaded the refactoring of the Apps-Engine core from legacy code to TypeScript, implementing complex recursive typing for enhanced safety.
+Cross-Runtime Compatibility: Collaborated within a massive monorepo (Turbo, Yarn) ensuring compatibility between Node.js and Deno environments.
 
-CORE SKILLS:
------------------------------------------------------
-TypeScript, JavaScript (ES6+), React.js, Node.js, Deno,
-REST APIs, Jest, Playwright, WCAG Accessibility.
+RS Advocacia, Remote | Technology & Automation Specialist	Jan 2025 – Jan 2026
+Workflow Automation: Developed an AI-powered WhatsApp assistant using n8n and Evolution API, automating client triage workflows.
+Digital Transformation: Eliminated redundant data entry by automating the collection of essential legal information, increasing human agent efficiency by 30%
+
+PROJECTS
+HistoryCommitsCLI | Node.js, TypeScript	Feb 2026 – Mar 2026
+Developed a CLI tool for managing Git metadata, allowing precise synchronization of commit dates.
+English for Devs | JavaScript, CSS, Gemini AI API	Oct 2025 – Nov 2025
+Built a web app mapping English meanings to technical concepts using Gemini AI for dynamic terminology translation.
+
+EDUCATION
+B.S. in Computer Science | Cruzeiro do Sul | Brazil	Aug 2025 – Jun 2029 (Expected)
+Professional Software Development | SENAI/SCTEC | Brazil	Feb 2025 – Nov 2026 (Expected)
+
+CERTIFICATIONS & LANGUAGES
+Certifications: Meta (Advanced React), IBM (Back-End Apps), Frontend Masters (Deep JS, Testing), Google AI Essentials. 
+Languages: Portuguese (Native), English (Advanced), Spanish (Professional).
 =====================================================`;
     }
     dom.dossierContent.textContent = text;
