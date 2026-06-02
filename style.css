@@ -246,6 +246,14 @@ body {
   background-color: var(--bg-dark);
 }
 
+.workspace-prompt {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0;
+}
+
 .system-status {
   display: flex;
   align-items: center;
