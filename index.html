@@ -3,7 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfólio de Rahian Santos, Desenvolvedor Full-Stack JavaScript." />
+    <meta name="description" content="Portfólio de Rahian Santos, Desenvolvedor Full-Stack JavaScript especializado em TypeScript, React, Node.js e automações de IA." />
+    <meta name="keywords" content="Rahian Santos, Desenvolvedor Full-Stack, JavaScript, TypeScript, React, GSoC, Rocket.Chat, Automação de IA, n8n, Node.js" />
+    <meta name="author" content="Rahian Santos" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfólio | Rahian Santos" />
+    <meta property="og:description" content="GSoC '26 Contributor no Rocket.Chat. Especializado em TypeScript, React, Node.js e automações inteligentes." />
+    <meta property="og:image" content="assets/logo.png" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Portfólio | Rahian Santos" />
+    <meta name="twitter:description" content="GSoC '26 Contributor no Rocket.Chat. Especializado em TypeScript, React, Node.js e automações inteligentes." />
+    <meta name="twitter:image" content="assets/logo.png" />
+
     <title>Portfólio | Rahian Santos</title>
     <link rel="icon" href="assets/logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,8 +63,8 @@
           <div class="lang-switcher-group">
             <label data-i18n="lang_label">Idioma / Language</label>
             <div class="lang-switcher-buttons">
-              <button id="lang-pt" class="lang-btn active">PT</button>
-              <button id="lang-en" class="lang-btn">EN</button>
+              <button id="lang-pt" class="lang-btn active" aria-label="Alterar idioma para Português" aria-pressed="true">PT</button>
+              <button id="lang-en" class="lang-btn" aria-label="Switch language to English" aria-pressed="false">EN</button>
             </div>
           </div>
         </div>
@@ -59,7 +74,7 @@
           <button id="sidebarContactBtn" class="btn-primary" data-i18n="sidebar_contact_btn">
             Fale Comigo
           </button>
-          <a href="#" class="btn-secondary" id="sidebarCvBtn" data-i18n="download_cv">
+          <a href="#" class="btn-secondary" id="sidebarCvBtn" data-i18n="download_cv" role="button" aria-label="Baixar Currículo / Download CV">
             Download CV
           </a>
         </div>
@@ -172,17 +187,17 @@
           <!-- Right deliverables results tabs -->
           <section class="results-panel">
             
-            <nav class="tabs-navigation">
-              <button class="tab-btn active" data-tab="skills" data-i18n="tab_skills">Habilidades</button>
-              <button class="tab-btn" data-tab="projects" data-i18n="tab_projects">Projetos</button>
-              <button class="tab-btn" data-tab="dossier" data-i18n="tab_dossier">Dossiê de Carreira</button>
-              <button class="tab-btn" data-tab="contact" data-i18n="tab_contact">Contato</button>
+            <nav class="tabs-navigation" role="tablist" aria-label="Navegação do Portfólio">
+              <button class="tab-btn active" data-tab="skills" data-i18n="tab_skills" role="tab" aria-selected="true" aria-controls="tab-skills" id="tablist-skills">Habilidades</button>
+              <button class="tab-btn" data-tab="projects" data-i18n="tab_projects" role="tab" aria-selected="false" aria-controls="tab-projects" id="tablist-projects">Projetos</button>
+              <button class="tab-btn" data-tab="dossier" data-i18n="tab_dossier" role="tab" aria-selected="false" aria-controls="tab-dossier" id="tablist-dossier">Dossiê de Carreira</button>
+              <button class="tab-btn" data-tab="contact" data-i18n="tab_contact" role="tab" aria-selected="false" aria-controls="tab-contact" id="tablist-contact">Contato</button>
             </nav>
 
             <div class="results-content">
               
               <!-- Tab 1: Skills Matrix -->
-              <div class="tab-view active" id="tab-skills">
+              <div class="tab-view active" id="tab-skills" role="tabpanel" aria-labelledby="tablist-skills">
                 <div class="skills-matrix">
                   <div class="skills-matrix-card core-tech">
                     <h3 data-i18n="skills_cat_core">Core Languages</h3>
@@ -224,7 +239,7 @@
               </div>
 
               <!-- Tab 2: Projects Catalog -->
-              <div class="tab-view" id="tab-projects">
+              <div class="tab-view" id="tab-projects" role="tabpanel" aria-labelledby="tablist-projects">
                 <div class="projects-catalog">
                   <!-- Project 1 -->
                   <div class="project-card featured">
@@ -324,29 +339,29 @@
               </div>
 
               <!-- Tab 3: Dossier Terminal -->
-              <div class="tab-view" id="tab-dossier">
+              <div class="tab-view" id="tab-dossier" role="tabpanel" aria-labelledby="tablist-dossier">
                 <div class="dossier-wrapper">
-                  <button class="copy-btn" id="copyDossierBtn" data-i18n="copy_dossier_btn">Copiar Dossiê</button>
+                  <button class="copy-btn" id="copyDossierBtn" data-i18n="copy_dossier_btn" aria-live="polite">Copiar Dossiê</button>
                   <pre class="dossier-content" id="dossierContentText"></pre>
                 </div>
               </div>
 
               <!-- Tab 4: Contact Panel -->
-              <div class="tab-view" id="tab-contact">
+              <div class="tab-view" id="tab-contact" role="tabpanel" aria-labelledby="tablist-contact">
                 <div class="contact-panel">
                   <p data-i18n="contact_subtitle">Tem uma ideia ou um projeto em mente? Vamos conversar. Preencha os parâmetros abaixo para instanciar o contato.</p>
-                  <form action="#" method="POST" id="contactForm">
+                  <form action="#" method="POST" id="contactForm" aria-label="Instanciar Contato / Contact Form">
                     <div class="contact-group">
-                      <label data-i18n="contact_name">Seu Nome</label>
-                      <input type="text" name="nome" required />
+                      <label for="contact-name" data-i18n="contact_name">Seu Nome</label>
+                      <input type="text" id="contact-name" name="nome" autocomplete="name" required aria-required="true" />
                     </div>
                     <div class="contact-group">
-                      <label data-i18n="contact_email">Seu Email</label>
-                      <input type="text" name="email" required />
+                      <label for="contact-email" data-i18n="contact_email">Seu Email</label>
+                      <input type="email" id="contact-email" name="email" autocomplete="email" required aria-required="true" />
                     </div>
                     <div class="contact-group">
-                      <label data-i18n="contact_message">Sua Mensagem</label>
-                      <textarea name="mensagem" required></textarea>
+                      <label for="contact-message" data-i18n="contact_message">Sua Mensagem</label>
+                      <textarea id="contact-message" name="mensagem" required aria-required="true"></textarea>
                     </div>
                     <button type="submit" class="btn-primary" data-i18n="contact_submit" style="width: auto;">Enviar Mensagem</button>
                   </form>

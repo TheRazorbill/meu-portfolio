@@ -255,7 +255,9 @@ Languages: Portuguese (Native), English (Advanced), Spanish (Professional).
 
     Object.keys(dom.langBtns).forEach(lang => {
       if (dom.langBtns[lang]) {
-        dom.langBtns[lang].classList.toggle("active", lang === currentLang);
+        const isActive = lang === currentLang;
+        dom.langBtns[lang].classList.toggle("active", isActive);
+        dom.langBtns[lang].setAttribute("aria-pressed", isActive ? "true" : "false");
       }
     });
 
@@ -296,8 +298,12 @@ Languages: Portuguese (Native), English (Advanced), Spanish (Professional).
     btn.addEventListener("click", () => {
       const targetTab = btn.getAttribute("data-tab");
       
-      dom.tabBtns.forEach(b => b.classList.remove("active"));
+      dom.tabBtns.forEach(b => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
       btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
 
       dom.tabViews.forEach(view => {
         view.classList.remove("active");
