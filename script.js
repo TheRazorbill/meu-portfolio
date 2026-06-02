@@ -56,11 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       project_intake_title: "Assistente de Triagem com IA",
       project_intake_desc: "Desenvolvimento de assistente automatizado integrando GPT-4o mini e Evolution API para triagem inteligente de leads, reduzindo o tempo de atendimento em 30%.",
 
-      contact_subtitle: "Tem uma ideia ou um projeto em mente? Vamos conversar. Preencha os parâmetros abaixo para instanciar o contato.",
-      contact_name: "Seu Nome",
-      contact_email: "Seu Email",
-      contact_message: "Sua Mensagem",
-      contact_submit: "Enviar Mensagem",
+      contact_subtitle: "Tem uma ideia ou um projeto em mente? Vamos conversar. Conecte-se comigo através das plataformas abaixo.",
 
       copy_dossier_btn: "Copiar Dossiê",
       copy_dossier_copied: "Copiado!",
@@ -123,11 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
       project_intake_title: "AI Intake Assistant",
       project_intake_desc: "Engineered an automated intake assistant integrating GPT-4o mini and Evolution API at RS Advocacia, reducing manual case handling time for agents by 30%.",
 
-      contact_subtitle: "Have an idea or a project in mind? Let's talk. Fill out the parameters below to instantiate the contact.",
-      contact_name: "Your Name",
-      contact_email: "Your Email",
-      contact_message: "Your Message",
-      contact_submit: "Send Message",
+      contact_subtitle: "Have an idea or a project in mind? Let's talk. Connect with me through the platforms below.",
 
       copy_dossier_btn: "Copy Dossier",
       copy_dossier_copied: "Copied!",
