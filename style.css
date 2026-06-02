@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    --bg-color: #f6f5f2;
-    --second-bg-color: #ffffff;
+    --bg-color: #ffffff;
+    --second-bg-color: #fafafa;
     --card-color: #ffffff;
-    --text-color: #1b1a16;
-    --main-color: #1b1a16;
-    --other-color: #6f6a60;
-    --border-color: #e3ded6;
-    --accent-soft: #efe9e1;
-    --accent-warm: #d9d2c7;
+    --text-color: #111111;
+    --main-color: #000000;
+    --other-color: #666666;
+    --border-color: #e5e5e5;
+    --accent-soft: #fcfcfc;
+    --accent-warm: #f0f0f0;
 }
 
 * {
@@ -24,9 +24,7 @@ html {
 }
 
 body {
-    background: radial-gradient(1200px 700px at 10% -10%, #ffffff 0%, rgba(255, 255, 255, 0) 60%),
-        radial-gradient(800px 600px at 90% -10%, #f0ebe4 0%, rgba(240, 235, 228, 0) 60%),
-        var(--bg-color);
+    background: var(--bg-color);
     color: var(--text-color);
     overflow-x: hidden;
 }
@@ -266,7 +264,9 @@ header.scrolled {
     height: auto;
     border-radius: 50%;
     border: 6px solid var(--second-bg-color);
-    box-shadow: 0 20px 60px rgba(27, 26, 22, 0.15);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .portfolio-section {
@@ -336,11 +336,12 @@ header.scrolled {
     height: 250px;
     object-fit: cover;
     border-bottom: 1px solid var(--border-color);
-    transition: transform 0.4s ease;
-    filter: saturate(0.9);
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: grayscale(100%) opacity(0.85);
 }
 .project-item:hover img {
     transform: scale(1.05);
+    filter: grayscale(100%) opacity(1);
 }
 .project-item figcaption {
     padding: 25px;
@@ -667,3 +668,44 @@ footer {
 .btn-view-more:active {
     transform: translateY(0);
 }
+
+/* Language Switcher Styles */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-right: 8px;
+    border: 1px solid var(--border-color);
+    padding: 2px 4px;
+    border-radius: 999px;
+    background-color: var(--second-bg-color);
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--other-color);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.lang-btn:hover {
+    color: var(--text-color);
+}
+
+.lang-btn.active {
+    color: var(--bg-color);
+    background-color: var(--text-color);
+}
+
+.lang-divider {
+    color: var(--border-color);
+    font-size: 0.8rem;
+}
+

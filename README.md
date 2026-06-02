@@ -1,71 +1,58 @@
-# Portfólio Pessoal
+# Portfolio Pessoal / Personal Portfolio
 
-Este repositório abriga o código-fonte do meu portfólio pessoal. É uma vitrine digital criada para apresentar minhas habilidades, projetos e minha jornada como desenvolvedor. O objetivo é oferecer um ponto de contato centralizado e uma demonstração prática das minhas competências em desenvolvimento web.
+[Português]
+Este repositório abriga o código-fonte do meu portfólio pessoal. Uma vitrine digital minimalista em preto e branco criada para apresentar minhas habilidades, projetos e minha jornada como desenvolvedor. O projeto conta com suporte total a tradução dinâmica em Português e Inglês.
 
----
-
-##  Demonstração Ao Vivo
-
-Você pode visualizar o projeto em funcionamento no link abaixo:
-
- **[Ver Portfólio](https://therazorbill.github.io/meu-portfolio/)**
+[English]
+This repository contains the source code for my personal developer portfolio. A minimalist, black-and-white digital showcase designed to present my skills, projects, and career journey. The project includes full support for dynamic localization in Portuguese and English.
 
 ---
 
+## Demonstracao Ao Vivo / Live Demo
 
-##  Funcionalidades
-
-O portfólio está estruturado com as seguintes seções:
-
-- **Seção Hero:** Uma seção de boas-vindas impactante para causar uma primeira impressão positiva.
-- **Habilidades:** Uma área dedicada para listar minhas competências técnicas e ferramentas que utilizo.
-- **Galeria de Projetos:** Uma vitrine para exibir meus principais trabalhos, com links para os projetos ao vivo e seus respectivos repositórios.
-- **Certificações & Educação:** Uma seção para organizar algumas de minhas certificacoes.
-- **Contato:** Uma seção para facilitar o contato profissional, com links para redes sociais e e-mail.
-- **Design Responsivo:** Layout totalmente adaptável para uma experiência de usuário consistente em desktops, tablets e smartphones.
+**[Ver Portfolio / View Portfolio](https://therazorbill.github.io/meu-portfolio/)**
 
 ---
 
-##  Tecnologias Utilizadas
+## Funcionalidades / Features
 
-Este projeto foi construído utilizando as tecnologias padrões do desenvolvimento front-end:
-
-- **HTML5:** Para a estrutura semântica do conteúdo.
-- **CSS3:** Para a estilização, layout e animações.
-- **JavaScript:** Para interatividade e manipulação do DOM.
-
----
-
-##  Como Executar Localmente
-
-Caso queira executar o projeto na sua própria máquina, siga os passos abaixo:
-
-1.  **Clone o repositório:**
-    ```bash
-    git clone https://github.com/TheRazorbill/meu-portfolio.git
-    ```
-
-2.  **Navegue até o diretório do projeto:**
-    ```bash
-    cd meu-portfolio
-    ```
-
-3.  **Abra o arquivo `index.html`** no seu navegador de preferência.
+- **Design Minimalista B&W:** Visual limpo, profissional e de alto contraste em preto e branco.
+- **Bilingue (i18n):** Alternador de idioma dinamico (PT/EN) integrado diretamente com persistencia em LocalStorage.
+- **Secao Hero:** Apresentacao com efeito dinamico de maquina de escrever adaptavel ao idioma.
+- **Habilidades:** Grid responsivo organizando linguagens, frameworks e ferramentas com opcao de visualizacao estendida.
+- **Galeria de Projetos:** Exibicao em carrossel de contribuicoes open-source (GSoC / Rocket.Chat) e ferramentas desenvolvidas.
+- **Experiencia & Educacao:** Linha do tempo estruturada unificando marcos academicos, profissionais e certificacoes.
+- **Contato:** Formulario funcional integrado com redes sociais.
+- **Responsividade Total:** Layout adaptado para smartphones, tablets e desktops.
 
 ---
 
-##  Contato
+## Tecnologias Utilizadas / Tech Stack
 
-Você pode entrar em contato comigo através das minhas redes:
+- **HTML5:** Estrutura semantica e marcas i18n para acessibilidade.
+- **CSS3:** Estilo responsivo puro baseados em variaveis nativas de cores e transicoes suaves.
+- **JavaScript (ES6+):** Motor de traducao dinamica, maquina de escrever e controle de carrossel.
+- **Boxicons:** Biblioteca de icones vetoriais minimalistas.
 
-- **Desenvolvido por:** TheRazorbill
-- **LinkedIn:** [Rahian S. S.](https://www.linkedin.com/in/rahian-s-s/)
+---
+
+## Como Executar Localmente / Running Locally
+
+1. Clone o repositorio:
+   ```bash
+   git clone https://github.com/TheRazorbill/meu-portfolio.git
+   ```
+
+2. Navegue ate o diretorio:
+   ```bash
+   cd meu-portfolio
+   ```
+
+3. Abra o arquivo `index.html` no seu navegador de preferencia.
 
 ---
 
-##  Visualização
+## Contato / Contact
 
-<img width="3360" height="1790" alt="image" src="https://github.com/user-attachments/assets/c10b8c26-9ccd-402d-90e5-3d4cbf6d27ab" />
-
-
----
+- **LinkedIn:** [Rahian Santos](https://www.linkedin.com/in/rahian)
+- **GitHub:** [TheRazorbill](https://github.com/TheRazorbill)
